@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
       <link rel="stylesheet" href="style/index.css">
       <link rel="stylesheet" href="style/header.css">
+      <link rel="stylesheet" href="style/footer.css">
     </head>
     <body>
 
@@ -18,7 +19,7 @@
       <?php include 'header.html'; ?>
 
       <!--Slider-->
-      <div class="bd-example slideraccueil">
+      <div class="bd-example" id="slideraccueil">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -58,6 +59,9 @@
           </a>
         </div>
       </div>
+
+      <!-- inclusion du footer-->
+      <?php include 'footer.php'; ?>
 
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

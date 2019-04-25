@@ -1,5 +1,5 @@
 #content, #real, #acteur {
-  background-color: #dadba7;
+  background-color: grey;
   padding-bottom: 20px;
 }
 
@@ -23,7 +23,7 @@
     flex-direction: column;
     width: 100%;
     min-height: 20vh;
-    background-color: #474747;
+    background-color: black;
     padding-bottom: 1%;
 }
 

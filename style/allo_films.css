@@ -40,6 +40,7 @@ body {
 
 #liste_films {
   background-color: black;
+  min-width:100%;
 }
 
 .menu_films {
@@ -202,53 +203,6 @@ button {
   -webkit-box-shadow: 2px 10px 178px 0px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: 2px 10px 178px 0px rgba(255, 255, 255, 0.75);
   transition: all 0.6s ease-in-out;
-}
-
-
-/********************************** CAROUSEL ***********************************/
-
-button:focus {
-  outline: 0;
-}
-
-.prev {
-  margin-top: -10em;
-  height: 60px;
-  width: 60px;
-  margin-left: 2em;
-  background-color: transparent;
-  z-index: 10;
-  border: none;
-  text-shadow: -4px 4px white;
-}
-
-.next {
-  margin-top: -10em;
-  height: 60px;
-  width: 60px;
-  margin-left: 92%;
-  background-color: transparent;
-  z-index: 10;
-  border: none;
-  text-shadow: 4px 4px white;
-}
-
-.next p,
-.prev p {
-  color: #1a1a1a;
-  margin-top: -40px;
-  font-weight: 900;
-  font-size: 60px;
-}
-
-.next p:hover,
-.prev p:hover {
-  color: #c7c3c3;
-}
-
-.siema {
-  margin-bottom: 30px;
-  margin-left: 1em;
 }
 
 /********************************** FOOOTER ***********************************/
