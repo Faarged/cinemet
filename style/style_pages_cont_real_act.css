@@ -95,13 +95,6 @@
   margin-bottom: 20px;
 }
 
-/*----------------------------------
-----pour la video bande annonce------
------------------------------------*/
-
-#content iframe {
-  margin-top: 5%;
-}
 
 /*----------------------------------------
 ----pour la partie CI du réalisateur------
@@ -199,12 +192,6 @@ a#cRetour.cVisible {
 /*----------------------------------
 ----------media query----------------
 ----------------------------------*/
-
-@media only screen and (max-width: 1199px) {
-  #content iframe {
-    margin-top: 10%;
-  }
-}
 
 @media only screen and (max-width: 991px) {
   #content .ligne, #real .ligne, #acteur .ligne,{

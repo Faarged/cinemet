@@ -126,7 +126,7 @@
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <div class="liens_films fadeInUp animated">
                     <div class="titre"> Nouveautés </div><br>
-                    <a href="content.php"><img class="effect " src="img/1.jpg" id="action">
+                    <a href="content.php" <?php echo 'id_film="1"' ?>><img class="effect " src="img/1.jpg" id="action">
                         <p>blablabla</p>
                     </a>
                     <a href="content.php"><img class="effect " src="img/2.jpg" id="science-fiction">
