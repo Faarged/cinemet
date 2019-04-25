@@ -46,7 +46,7 @@
                                 <li><a href="#">Tous les films</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" class="collapsible">Science-fiction</a>
+                        <li><a href="#" class="collapsible">Horreur</a>
                             <ul>
                                 <li><a href="#">Top 2019</a></li>
                                 <li><a href="#">Meilleurs films</a></li>
@@ -62,6 +62,14 @@
                                 <li><a href="#">Tous les films</a></li>
                             </ul>
                         </li>
+                        <li><a href="#" class="collapsible">Thriller</a>
+                            <ul>
+                                <li><a href="#">Top 2019</a></li>
+                                <li><a href="#">Meilleurs films</a></li>
+                                <li><a href="#">Box office</a></li>
+                                <li><a href="#">Tous les films</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#" class="collapsible">Drame</a>
                             <ul>
                                 <li><a href="#">Top 2019</a></li>
@@ -70,15 +78,7 @@
                                 <li><a href="#">Tous les films</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" class="collapsible">Animation</a>
-                            <ul>
-                                <li><a href="#">Top 2019</a></li>
-                                <li><a href="#">Meilleurs films</a></li>
-                                <li><a href="#">Box office</a></li>
-                                <li><a href="#">Tous les films</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="collapsible">Horreur</a>
+                        <li><a href="#" class="collapsible">Romantique</a>
                             <ul>
                                 <li><a href="#">Top 2019</a></li>
                                 <li><a href="#">Meilleurs films</a></li>

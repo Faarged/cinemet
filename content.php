@@ -22,7 +22,28 @@
 </head>
 
 <body>
+  <!-- je connecte ma base de données -->
+  <?php
+  try
+  {
+  	// On se connecte à MySQL avec pdo
+  	$bdd = new PDO('mysql:host=localhost;dbname=phpmyadmin;charset=utf8', 'phpmyadmin', 'pioupiou');
+  }
+  catch(Exception $e)
+  {
+  	// En cas d'erreur, on affiche un message et on arrête tout
+          die('Erreur : '.$e->getMessage());
+  }
 
+  // Si tout va bien, on peut continuer
+
+  // On récupère tout le contenu de la table film
+  $reponse = $bdd->query('SELECT * FROM film');
+
+  // On affiche chaque entrée une à une
+  while ($donnees = $reponse->fetch())
+  {
+  ?>
     <!--//////////////////////////////  NAVBAR  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
 
     <?php include 'header.html'; ?>
@@ -33,7 +54,7 @@
     <!--  pour le titre -->
 
   <div class="hoofd">
-    <h1 class="text-uppercase">Titre du film</h1>
+    <h1 class="text-uppercase"><?php echo $donnees['titre']; ?></h1>
   </div>
 
     <!-- pour l'image du film -->
