@@ -9,7 +9,7 @@ html{
 }
 
 #slideraccueil{
-  
+  max-height:100em;
 }
 
 .titreslide{
@@ -18,4 +18,8 @@ html{
 
 .textslide{
 
+}
+
+img{
+  max-height: 100vh;
 }
