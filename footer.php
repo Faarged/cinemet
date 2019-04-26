@@ -1,25 +1,25 @@
-<footer id="footer" class="page-footer font-small text-white mdb-color">
+<footer id="footer" class="text-white">
 
     <!-- Footer Links -->
-    <div class="container text-center text-md-left ">
+    <div class="container text-center">
 
         <!-- Footer links -->
-        <div class="row text-center text-md-left mt-3 pb-3 mx-auto">
+        <div class="row">
 
             <!-- Grid column -->
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mx-auto">
-                <h5 class=" text-uppercase mb-4  font-weight-bold text-white"><a href="index.html"> AllocineMET</a>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <h5 class=" text-uppercase mb-4  font-weight-bold text-white"><a href="index.php"> AllocineMET</a>
                 </h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua.</p>
             </div>
             <!-- Grid column -->
 
-            <hr class="w-100 clearfix d-md-none">
+            <hr class="w-100">
 
             <!-- Grid column -->
-            <div class="col-sm-3 col-md-2 col-lg-2 col-xl-2 mx-auto" id="foot">
-                <h5 class="text-uppercase mb-4 font-weight-bold">Films à l'affiche</h5>
+            <div class="col-sm-3 col-md-2 col-lg-2 col-xl-2" id="foot">
+                <h5 class="text-uppercase font-weight-bold">Films à l'affiche</h5>
                 <p>
                     <a href="#">Film 1</a>
                 </p>
@@ -35,19 +35,19 @@
             </div>
             <!-- Grid column -->
 
-            <hr class="w-100 clearfix d-md-none" id="foot">
+            <hr class="w-100" id="foot">
 
             <!-- Grid column -->
-            <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 mx-auto" id="foot">
-                <h5 class="text-uppercase mb-4 font-weight-bold">Liens utiles</h5>
+            <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2" id="foot">
+                <h5 class="text-uppercase font-weight-bold">Liens utiles</h5>
                 <p>
-                    <a href="https://simplon.co/">Lorem Ipsum</a>
+                    <a href="https://simplon.co/">Simplon</a>
                 </p>
                 <p>
-                    <a href="https://simplon-charleville.fr/">Lorem Ipsum</a>
+                    <a href="https://simplon-charleville.fr/">Simplon Charleville</a>
                 </p>
                 <p>
-                    <a href="#!">Lorem Ipsum</a>
+                    <a href="#">Lorem Ipsum</a>
                 </p>
                 <p>
                     <a href="#">Lorem Ipsum</a>
@@ -55,11 +55,11 @@
             </div>
 
             <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none" id="foot">
+            <hr class="w-100" id="foot">
 
             <!-- Grid column -->
-            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mx-auto">
-                <h5 class="text-uppercase mb-4 font-weight-bold"><a href="contact.php">Contact</a></h5>
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <h5 class="text-uppercase font-weight-bold"><a href="contact.php">Contact</a></h5>
                 <p>
                     AllocineMET</p>
                 <p>

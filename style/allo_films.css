@@ -8,13 +8,12 @@ body {
 .row {
   margin-left: -15px;
   margin-right: -15px;
-  background-color: #dadba7;
 }
 
 /********************************** HEADER ***********************************/
-
 .header_films {
   display: flex;
+  margin-top: 60px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -37,21 +36,21 @@ body {
 }
 
 /********************************** LISTE FILMS ***********************************/
-
 #liste_films {
   background-color: black;
-  min-width:100%;
+  min-width: 100%;
 }
 
 .menu_films {
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 15px 15px 15px 15px;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #dadba7;
-  height: 95%;
+  height: auto;
   border-right: solid 5px #4747478a;
   border-top: solid 5px #4747478a;
   border-bottom: solid 5px #4747478a;
+  border-left: solid 5px #4747478a;
 }
 
 .menu_films_portable {
@@ -91,7 +90,6 @@ button {
   background-color: #474747;
   border-radius: 6px;
   margin-bottom: 2px;
-
 }
 
 #menu-accordeon li li {
@@ -144,12 +142,10 @@ button {
   opacity: 0;
 }
 
-
 /********************************** LIENS FILMS ***********************************/
-
 .liens_films {
   overflow: hidden;
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 15px 15px 15px 15px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 30px;
@@ -161,6 +157,7 @@ button {
   border-left: solid 5px #4747478a;
   border-top: solid 5px #4747478a;
   border-bottom: solid 5px #4747478a;
+  border-right: solid 5px #4747478a;
 }
 
 .liens_films p {
@@ -176,7 +173,6 @@ button {
   text-decoration: none;
 }
 
-
 .titre {
   margin-top: 2%;
   margin-left: 40%;
@@ -186,7 +182,6 @@ button {
   font-weight: 600;
 }
 
-
 .effect {
   border-radius: 25px;
   width: 200px;
@@ -195,9 +190,8 @@ button {
   margin-top: 15px;
 }
 
-
 .effect:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   border: 5px solid #494343be;
   box-shadow: 2px 10px 178px 0px rgba(255, 255, 255, 0.75);
   -webkit-box-shadow: 2px 10px 178px 0px rgba(255, 255, 255, 0.75);
@@ -205,38 +199,17 @@ button {
   transition: all 0.6s ease-in-out;
 }
 
-/********************************** FOOOTER ***********************************/
-
-#footer {
-  background-color: #dadba7;
-  font-family: 'Roboto Condensed', sans-serif;
-  border-block-start: solid 5px #47474773;
-}
-
-
-#footer a,
-p,
-h5 {
-  color: black;
-  line-height: 0.9em;
-  margin-bottom: 0.6em;
-}
-
-container {
-  margin-bottom: 20px;
-}
-
 /********************************** BACK TO TOP ***********************************/
-
 a#cRetour {
   border-radius: 3px;
   padding: 10px;
   font-size: 15px;
   text-align: center;
-  color: #fff;
-  background: #474747;
+  color: black;
+  background: white;
   position: fixed;
-  right: 20px;
+  right: 30px;
+  bottom: 20px;
   opacity: 1;
   z-index: 99999;
   transition: all ease-in 0.2s;
@@ -250,26 +223,17 @@ a#cRetour:before {
 }
 
 a#cRetour:hover {
-  background: rgba(0, 0, 0, 1);
+  background: black;
+  color: white;
   transition: all ease-in 0.2s;
 }
 
 a#cRetour.cInvisible {
-  bottom: -35px;
-  opacity: 0;
   transition: all ease-in 0.5s;
 }
 
-a#cRetour.cVisible {
-  bottom: 20px;
-  opacity: 1;
-}
-
-
 /********************************** MEDIA QUERIES ***********************************/
-
 @media only screen and (max-width: 1199px) {
-
   .effect {
     width: 170px;
     height: 240px;
@@ -277,7 +241,6 @@ a#cRetour.cVisible {
 }
 
 @media only screen and (max-width: 880px) {
-
   .header_films h1 {
     margin-top: 1em;
     font-size: 4.2em;
@@ -290,7 +253,6 @@ a#cRetour.cVisible {
 }
 
 @media only screen and (max-width: 767px) {
-
   #Navbar {
     transform: translateY(-100%);
     display: flex;
@@ -328,11 +290,9 @@ a#cRetour.cVisible {
     width: 120px;
     height: 170px;
   }
-
 }
 
 @media only screen and (max-width: 576px) {
-
   .m-nav-toggle {
     margin-left: 45%;
   }
@@ -354,11 +314,14 @@ a#cRetour.cVisible {
   .menu_films_portable {
     display: block;
     margin-top: 20px;
+    margin-bottom: 10px;
     padding-bottom: 25px;
     background-color: #dadba7;
-    height: 70%;
+    height: auto;
     border-top: solid 5px #4747478a;
     border-bottom: solid 5px #4747478a;
+    border-right: solid 5px #4747478a;
+    border-left: solid 5px #4747478a;
   }
 
   #menu-accordeon {
@@ -393,9 +356,4 @@ a#cRetour.cVisible {
   .next {
     margin-left: 80%;
   }
-
-  #foot {
-    display: none;
-  }
-
 }

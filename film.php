@@ -14,6 +14,7 @@
       <link rel="stylesheet" href="style/allo_films.css">
       <link rel="stylesheet" href="style/animate.css">
       <link rel="stylesheet" href="style/header.css">
+      <link rel="stylesheet" href="style/footer.css">
   </head>
 
     <body>
