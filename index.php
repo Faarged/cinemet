@@ -31,21 +31,21 @@
               <img src="img/1.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="titreslide">Cinemet</h5>
-                <p class="textslide">Les dernières sorties de films.</p>
+                <p class="textslide">VOTRE lieu de visionnage des meilleurs productions.</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="img/2.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>A l'affiche</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>les dernières sorties.</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="img/3.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <h5>Nos films</h5>
+                <p>disponibles dans notre filmothèque <a href="film.php">ici</a>.</p>
               </div>
             </div>
           </div>
