@@ -58,12 +58,12 @@
 
 
 /*-----------------------------------------
-----pour l'image du film sur content------
+----pour l'affiche du film sur content------
 -----------------------------------------*/
 
 #content .media {
-  width: 70%;
-  height: 400px;
+  width: 50em;
+  height: 30em;
   margin: 20px auto;
 }
 
@@ -86,28 +86,6 @@
   margin-top: 20px;
 
 }
-
-/*------------------------------
-----pour la partie récap------
--------------------------------*/
-
-#content .row {
-  margin-bottom: 20px;
-}
-
-
-/*----------------------------------------
-----pour la partie CI du réalisateur------
------------------------------------------*/
-
-#real .row, #acteur .row {
-  margin-top: 20px;
-}
-
-#real .CI, #acteur .CI {
-  margin-bottom: 20px;
-}
-
 
 /*------------------------------------
 ----pour la galerie des affiches------
@@ -218,7 +196,7 @@ a#cRetour.cVisible {
    width: 100%;
    height: 100vh;
    background-color: #474747;
-}
+ }
 
 .m-nav-toggle{
   margin-left: 60%;
