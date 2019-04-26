@@ -98,23 +98,15 @@
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item">
                             <a class="btn-floating btn-sm rgba-white-slight mx-1" href="https://www.facebook.com/">
-                                <img src="img/facebook.png" title="facebook">
-                            </a>
+                                <i class="fab fa-facebook-f"></i></a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn-floating btn-sm rgba-white-slight mx-1" href="https://twitter.com/">
-                                <img src="img/twitter.png" title="twitter">
-                            </a>
+                              <i class="fab fa-twitter"></i></a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn-floating btn-sm rgba-white-slight mx-1" href="https://github.com/">
-                                <img src="img/github.png" title="github">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1" href="https://fr.linkedin.com/">
-                                <img src="img/linkedin.png" title="linkedin">
-                            </a>
+                              <i class="fab fa-github"></i></a>
                         </li>
                     </ul>
                 </div>
