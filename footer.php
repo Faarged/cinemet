@@ -1,4 +1,4 @@
-<footer id="footer" class="page-footer font-small text-white mdb-color pt-4">
+<footer id="footer" class="page-footer font-small text-white mdb-color">
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left ">
@@ -7,7 +7,7 @@
         <div class="row text-center text-md-left mt-3 pb-3 mx-auto">
 
             <!-- Grid column -->
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mx-auto">
                 <h5 class=" text-uppercase mb-4  font-weight-bold text-white"><a href="index.html"> AllocineMET</a>
                 </h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -19,7 +19,7 @@
             <hr class="w-100 clearfix d-md-none">
 
             <!-- Grid column -->
-            <div class="col-sm-3 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="foot">
+            <div class="col-sm-3 col-md-2 col-lg-2 col-xl-2 mx-auto" id="foot">
                 <h5 class="text-uppercase mb-4 font-weight-bold">Films à l'affiche</h5>
                 <p>
                     <a href="#">Film 1</a>
@@ -39,7 +39,7 @@
             <hr class="w-100 clearfix d-md-none" id="foot">
 
             <!-- Grid column -->
-            <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 mx-auto mt-3" id="foot">
+            <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 mx-auto" id="foot">
                 <h5 class="text-uppercase mb-4 font-weight-bold">Liens utiles</h5>
                 <p>
                     <a href="https://simplon.co/">Lorem Ipsum</a>
@@ -59,7 +59,7 @@
             <hr class="w-100 clearfix d-md-none" id="foot">
 
             <!-- Grid column -->
-            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mx-auto">
                 <h5 class="text-uppercase mb-4 font-weight-bold"><a href="contact.php">Contact</a></h5>
                 <p>
                     AllocineMET</p>
