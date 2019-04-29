@@ -18,6 +18,21 @@
   </head>
 
     <body>
+      <!-- je connecte ma base de données -->
+      <?php
+      require_once 'comabdd.php';
+
+      // Si tout va bien, on peut continuer
+
+      // On récupère tout le contenu de la table film
+      $reponse = $bdd->query('SELECT * FROM film');
+      //$donnees = $reponse->fetch();
+      // On affiche chaque entrée une à une
+      while ($donnees = $reponse->fetch())
+      {
+      //foreach ($donnees as $film){
+
+      ?>
 
         <!--//////////////////////////////  NAVBAR  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
 
@@ -25,7 +40,7 @@
 
         <!--//////////////////////////////  HEADER  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
 
-        <div class="header_films">
+        <div class="header_films" id="nosfilms">
             <h1>NOS FILMS</h1>
         </div>
 
@@ -128,35 +143,35 @@
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <div class="liens_films fadeInUp animated">
                     <div class="titre"> Nouveautés </div><br>
-                    <a href="content.php" <?php echo 'id_film="1"' ?>><img class="effect " src="img/1.jpg" id="action">
-                        <p>blablabla</p>
+                    <a href="content.php?id=1"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/2.jpg" id="science-fiction">
-                        <p>blablabla</p>
+                    <a href="content.php?id=2"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/3.jpg" id="horreur">
-                        <p>blablabla</p>
+                    <a href="content.php?id=3"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/4.jpg" id="action">
-                        <p>blablabla</p>
+                    <a href="content.php?id=4"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/5.jpg" id="science-fiction">
-                        <p>blablabla</p>
+                    <a href="content.php?id=5"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/6.jpg" id="horreur">
-                        <p>blablabla</p>
+                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/7.jpg" id="action">
-                        <p>blablabla</p>
+                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/8.jpg" id="science-fiction">
-                        <p>blablabla</p>
+                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/9.jpg" id="horreur">
-                        <p>blablabla</p>
+                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php"><img class="effect " src="img/10.jpg" id="action">
-                        <p>blablabla</p>
+                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                        <p><?php echo $donnees['titre']; ?></p>
                     </a>
                 </div>
               </div> <!-- fin col-->
@@ -169,8 +184,14 @@
 
         <!--//////////////////////////////  BACK TO TOP BTN  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
 
-        <div><a id="cRetour" class="cInvisible" href="#liste_film"></a></div>
+        <div><a id="cRetour" class="cInvisible" href="#nosfilms"></a></div>
 
+        <!-- ************Je ferme ma requete vers la BDD************** -->
+      <?php }
+
+      $reponse->closeCursor(); // Termine le traitement de la requête
+
+      ?>
 
         <!--//////////////////////////////  SCRIPTS  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>

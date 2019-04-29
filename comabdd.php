@@ -11,20 +11,3 @@ catch(Exception $e)
 }
 
 // Si tout va bien, on peut continuer
-
-// On récupère tout le contenu de la table jeux_video
-$reponse = $bdd->query('SELECT * FROM film WHERE id_film=1');
-
-// On affiche chaque entrée une à une
-while ($donnees = $reponse->fetch())
-{
-?>
-
-<?php echo $donnees['titre']; ?>
-
-<?php
-}
-
-$reponse->closeCursor(); // Termine le traitement de la requête
-
-?>
