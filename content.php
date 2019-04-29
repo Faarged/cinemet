@@ -33,8 +33,8 @@
   // Si tout va bien, on peut continuer
   // On récupère tout le contenu de la table film
   //$reponse = $bdd->query('SELECT * FROM film');
-  $req = "SELECT * FROM film WHERE id_film=" .$_GET["id"];
-  $reponse = $bdd->query($req);
+  //$req = "SELECT * FROM film WHERE id_film=" .$_GET["id"];
+  $reponse = $bdd->query("SELECT * FROM film WHERE id_film=" .$_GET["id"]);
   // On affiche chaque entrée une à une
   while ($donnees = $reponse->fetch())
   {

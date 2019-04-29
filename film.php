@@ -158,19 +158,19 @@
                     <a href="content.php?id=5"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
                         <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                    <a href="content.php?id=6"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
                         <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                    <a href="content.php?id=7"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
                         <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                    <a href="content.php?id=8"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
                         <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                    <a href="content.php?id=9"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
                         <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php?id="><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                    <a href="content.php?id=10"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
                         <p><?php echo $donnees['titre']; ?></p>
                     </a>
                 </div>
