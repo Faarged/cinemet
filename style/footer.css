@@ -1,7 +1,7 @@
-footer{
+footer {
   min-width: 100%;
+  color: black;
 }
-
 
 #footer {
   background-color: grey;
@@ -9,23 +9,61 @@ footer{
   border-block-start: solid 5px #47474773;
 }
 
-#footer a {
+/*#footer a {
   color: white;
+}*/
+footer .une {
+  height: 190px;
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  line-height: 30px;
+  align-items: center;
 }
 
-i{
+.taille {
+  height: 75px;
+  text-align: center;
+}
+
+footer .deux {
+  text-align: center;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  color: #D00106;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  footer .une {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    text-align: center;
+  }
+}
+
+i {
   color: black;
   font-size: 2em;
 }
 
-i:hover{
+i:hover {
   transform: scale(1.5);
 }
 
 /*----------------------------------
 ----------media query----------------
 ----------------------------------*/
-
 @media only screen and (max-width: 1199px) {
   #footer .in {
     display: none;
