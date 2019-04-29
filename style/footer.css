@@ -7,15 +7,12 @@ footer {
   background-color: grey;
   font-family: 'Roboto Condensed', sans-serif;
   border-block-start: solid 5px #47474773;
+  border-left: solid 5px #47474773;
+  border-right: solid 5px #47474773;
 }
 
-/*#footer a {
-  color: white;
-}*/
 footer .une {
   height: 190px;
-  border-bottom: solid 1px;
-  border-top: solid 1px;
   line-height: 30px;
   align-items: center;
 }
@@ -59,19 +56,4 @@ i {
 
 i:hover {
   transform: scale(1.5);
-}
-
-/*----------------------------------
-----------media query----------------
-----------------------------------*/
-@media only screen and (max-width: 1199px) {
-  #footer .in {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  #footer .in {
-    display: initial;
-  }
 }
