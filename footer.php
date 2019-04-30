@@ -1,15 +1,15 @@
 <footer id="footer">
   <div class="container-fluid">
     <div class="row une">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <ul>
           <li><a href="index.php">Accueil</a></li>
-          <li><a href="formation.php">Nos Films</a></li>
-          <li><a href="candidate.php">Je candidate</a></li>
-          <li><a href="#">Filmographie</a></li>
+          <li><a href="film.php">Nos Films</a></li>
+          <li><a href="#">Je candidate</a></li>
+          <li><a href="film.php">Filmographie</a></li>
         </ul>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <ul>
           <li><a href="#">Conditions</a></li>
           <li><a href="#">Politique de confidentialité</a></li>

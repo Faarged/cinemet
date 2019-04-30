@@ -62,7 +62,7 @@
 
 
       <!--**************************parallax*********************** -->
-      <div class="parallax-window" data-parallax="scroll" data-image-src="img/matrix.jpg"></div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="img/shining.jpg"></div>
 
       <!-- *****************inclusion du footer********************-->
       <?php include 'footer.php'; ?>
