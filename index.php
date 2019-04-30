@@ -10,6 +10,7 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="style/animate.css">
       <link rel="stylesheet" href="style/index.css">
       <link rel="stylesheet" href="style/header.css">
       <link rel="stylesheet" href="style/footer.css">
@@ -28,7 +29,7 @@
       <?php include 'header.html'; ?>
 
       <!--***********************Slider***********************-->
-      <div class="bd-example" id="slideraccueil">
+      <div class="bd-example animated slideInLeft" id="slideraccueil">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -89,7 +90,7 @@
           <div class="row">
             <h5>ALLOCINE<strong>MET</strong></h5>
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
-                <img src="img/matrix.jpg" style="max-width: 100%; max-height: 50em;">
+                <img class="animated slideInLeft" src="img/matrix.jpg" style="max-width: 100%; max-height: 50em;">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing

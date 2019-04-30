@@ -23,6 +23,7 @@ body {
 }
 
 #slideraccueil h5, #slideraccueil p {
+  max-width: 100%;
   background-color: black;
   opacity: 0.8;
 }

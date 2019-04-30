@@ -39,7 +39,7 @@
 
         <!--//////////////////////////////  HEADER  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
 
-        <div class="header_films" id="nosfilms">
+        <div class="header_films animated rollIn" id="nosfilms">
             <h1>NOS FILMS</h1>
         </div>
 
