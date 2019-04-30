@@ -15,10 +15,10 @@
     </head>
     <body>
 
-      <!--Navbar-->
+      <!--*******************Navbar******************-->
       <?php include 'header.html'; ?>
 
-      <!--Slider-->
+      <!--***********************Slider***********************-->
       <div class="bd-example" id="slideraccueil">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -60,7 +60,11 @@
         </div>
       </div>
 
-      <!-- inclusion du footer-->
+
+      <!--**************************parallax*********************** -->
+      <div class="parallax-window" data-parallax="scroll" data-image-src="img/matrix.jpg"></div>
+
+      <!-- *****************inclusion du footer********************-->
       <?php include 'footer.php'; ?>
 
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>

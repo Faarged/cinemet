@@ -21,14 +21,14 @@
 
         <form action="admin.php" method="post" id="formulaire">
             <p>
-            <label for="titre">TITRE</label> : <input type="text" name="TITRE" id="TITRE"  /><br />
-            <label for="duree">DUREE</label> :  <input type="time" name="DUREE" id="DUREE" /><br />
-            <label for="affiche">AFFICHE</label> :  <input type="text" name="AFFICHE" id="AFFICHE" /><br />
-            <label for="date_sortie">DATE_SORTIE</label> : <input type="date" name="DATE_SORTIE" id="DATE_SORTIE"  /><br />
-            <label for="resume">RESUME</label> : <input type="text" name="RESUME" id="RESUME"  /><br />
-            <label for="trailer">TRAILER</label> :  <input type="text" name="VIDEO" id="VIDEO" /><br />
-            <label for="REALISATEUR">REALISATEUR</label> : <input type="text" name="REALISATEUR" id="REALISATEUR"  /><br />
-            <label for="ACTEUR">ACTEUR</label> :  <input type="text" name="ACTEUR" id="ACTEUR" /><br />
+            <label for="titre">TITRE</label> : <input type="text" name="titre" id="titre"  /><br />
+            <label for="duree">DUREE</label> :  <input type="time" name="duree" id="duree" /><br />
+            <label for="affiche">AFFICHE</label> :  <input type="text" name="affiche" id="affiche" /><br />
+            <label for="date_sortie">DATE_SORTIE</label> : <input type="date" name="date_sortie" id="date_sortie"  /><br />
+            <label for="resume">RESUME</label> : <input type="text" name="resume" id="resume"  /><br />
+            <label for="trailer">TRAILER</label> :  <input type="text" name="trailer" id="trailer" /><br />
+            <label for="realisateur">REALISATEUR</label> : <input type="text" name="realisateur" id="realisateur"  /><br />
+            <label for="acteur">ACTEUR</label> :  <input type="text" name="acteur" id="acteur" /><br />
             <label for="genre">GENRE</label> :  <input type="text" name="genre" id="genre" /><br />
 
             <input type="submit" value="Envoyer" />
@@ -39,7 +39,7 @@
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=cinemet;charset=utf8', 'root', 'toor');
+    $bdd = new PDO('mysql:host=localhost;dbname=phpmyadmin;charset=utf8', 'phpmyadmin', 'pioupiou');
 }
 catch(Exception $e)
 {

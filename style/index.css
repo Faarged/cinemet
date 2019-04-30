@@ -1,25 +1,26 @@
-html{
-  margin:0;
-  padding:0;
+html {
+  margin: 0;
+  padding: 0;
 }
 
-#link_nav{
+#link_nav {
   background-color: black;
   opacity: 0.3;
 }
 
-#slideraccueil{
-  max-height:100em;
+#slideraccueil {
+  max-height: 100em;
 }
 
-.titreslide{
+.titreslide {}
 
-}
+.textslide {}
 
-.textslide{
-
-}
-
-img{
+.carousel-item img {
   max-height: 100vh;
+}
+
+.parallax-window {
+  min-height: 300px;
+  background: transparent;
 }
