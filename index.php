@@ -82,7 +82,7 @@
 
 
       <!--**************************parallax*********************** -->
-      <div class="parallax-window" data-parallax="scroll" data-image-src="img/shining.jpg"></div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="img/salle.jpg"></div>
 
 
       <div class="container-fluid">
