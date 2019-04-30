@@ -1,5 +1,5 @@
 /********************************** NAVBAR ***********************************/
-#link_nav {
+/*#link_nav {
   position: fixed;
   z-index: 99;
   display: flex;
@@ -12,25 +12,13 @@
   font-family: 'Poiret One', cursive;
   font-size: 1.8em;
   color: black;
-}
-
+}*/
 #link_nav a {
   color: whitesmoke;
-}
-
-#Navbar a {
-  padding: 5px;
-  border: 2px solid white;
-  border-radius: 15px;
+  font-family: 'Poiret One', cursive;
+  font-size: 1.8em;
 }
 
 #link_nav a:hover {
   color: grey;
 }
-
-/*
-.navbar-toggler,
-.navbar-toggler:before,
-.navbar-toggler:after {
-  background-color: red;
-}*/
