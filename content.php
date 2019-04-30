@@ -26,16 +26,11 @@
 <body>
   <!-- je connecte ma base de données -->
   <?php
+  //j'appelle ma connexion a la bdd
   require_once 'comabdd.php';
-  //require_once 'fonction.php';
-
-  //$donnees = getligne($bdd,1, $_GET['id']);
-  // Si tout va bien, on peut continuer
-  // On récupère tout le contenu de la table film
-  //$reponse = $bdd->query('SELECT * FROM film');
-  //$req = "SELECT * FROM film WHERE id_film=" .$_GET["id"];
+  //je stock ma bdd ds une variable reponse en lui disant de prendre pour id_film l'id du lien choisi
   $reponse = $bdd->query("SELECT * FROM film WHERE id_film=" .$_GET["id"]);
-  // On affiche chaque entrée une à une
+  // On affiche chaque entrée une à une grace à la boucle while, la variable donnees contient 1 ligne par 1 ligne
   while ($donnees = $reponse->fetch())
   {
   ?>
