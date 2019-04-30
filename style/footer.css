@@ -1,10 +1,10 @@
 footer {
   min-width: 100%;
-  color: black;
+  color: white;
 }
 
 #footer {
-  background-color: grey;
+  background: #0C0163;
   font-family: 'Roboto Condensed', sans-serif;
   border-block-start: solid 5px #47474773;
   border-left: solid 5px #47474773;
@@ -31,7 +31,7 @@ footer li {
 }
 
 footer a {
-  color: black;
+  color: white;
 }
 
 footer a:hover {
@@ -50,7 +50,7 @@ footer a:hover {
 }
 
 i {
-  color: black;
+  color: white;
   font-size: 2em;
 }
 

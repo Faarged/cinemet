@@ -1,5 +1,5 @@
 #content, #real, #acteur {
-  background-color: grey;
+  background-color: #051C57;
   padding-bottom: 20px;
 }
 
@@ -24,7 +24,7 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  background-color: black;
+  background-color: #0C0163;
   padding-bottom: 1%;
   margin-top: 60px;
 }
@@ -87,45 +87,6 @@
 #real .text-center, #acteur .text-center {
   margin-left: 6%;
   margin-top: 20px;
-}
-
-/*------------------------------------
-----pour la galerie des affiches------
--------------------------------------*/
-#real .liens_films, #acteur .liens_films {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #494343;
-  justify-content: space-around;
-  height: 100%;
-  margin-left: 10%;
-  border-radius: 15px;
-  padding-bottom: 20px;
-}
-
-#acteur .liens_films {
-  border: 5px solid #dadba7;
-}
-
-#real .liens_films {
-  border: 5px solid rgb(117, 117, 117);
-}
-
-#real .affiche, #acteur .affiche {
-  width: 200px;
-  height: 300px;
-  margin: 40px;
-  border-radius: 25px;
-}
-
-#real .affiche:hover, #acteur .affiche:hover {
-  transform: scale(1.2);
-  border: 5px solid #494343be;
-  box-shadow: 2px 10px 178px 0px rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: 2px 10px 178px 0px rgba(255, 255, 255, 0.75);
-  -moz-box-shadow: 2px 10px 178px 0px rgba(255, 255, 255, 0.75);
-  transition: all 0.6s ease-in-out;
 }
 
 /********************************** BACK TO TOP ***********************************/
