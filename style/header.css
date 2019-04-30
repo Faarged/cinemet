@@ -1,22 +1,18 @@
 /********************************** NAVBAR ***********************************/
-/*#link_nav {
+#link_nav {
   position: fixed;
   z-index: 99;
   display: flex;
   flex-direction: row;
   padding-left: 3%;
-  padding-top: 10px;
-  padding-bottom: 10px;
   background-color: black;
-  font-weight: bolder;
   font-family: 'Poiret One', cursive;
-  font-size: 1.8em;
-  color: black;
-}*/
+  font-size: 1.4em;
+}
+
 #link_nav a {
   color: whitesmoke;
   font-family: 'Poiret One', cursive;
-  font-size: 1.8em;
 }
 
 #link_nav a:hover {
