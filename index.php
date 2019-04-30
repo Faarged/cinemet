@@ -15,7 +15,15 @@
       <link rel="stylesheet" href="style/footer.css">
     </head>
     <body>
-
+      <?php
+      //j'appelle ma connexion a la bdd
+      require_once 'comabdd.php';
+      //je stock ma bdd ds une variable reponse
+      $reponse = $bdd->query("SELECT * FROM film");
+      // On affiche chaque entrée une à une grace à la boucle while, la variable donnees contient 1 ligne par 1 ligne
+      while ($donnees = $reponse->fetch())
+      {
+      ?>
       <!--*******************Navbar******************-->
       <?php include 'header.html'; ?>
 
@@ -29,21 +37,21 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img/1.jpg" class="d-block w-100" alt="...">
+              <img src="<?php echo $donnees['affiche']; ?>" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="titreslide">Cinemet</h5>
                 <p class="textslide">VOTRE lieu de visionnage des meilleurs productions.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/2.jpg" class="d-block w-100" alt="...">
+              <img src="<?php echo $donnees['affiche']; ?>" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>A l'affiche</h5>
                 <p>les dernières sorties.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/3.jpg" class="d-block w-100" alt="...">
+              <img src="<?php echo $donnees['affiche']; ?>" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Nos films</h5>
                 <p>disponibles dans notre filmothèque <a href="film.php">ici</a>.</p>
@@ -119,6 +127,11 @@
       </div>
       <!-- *****************inclusion du footer********************-->
       <?php include 'footer.php'; ?>
+
+      <!-- ************Je ferme ma requete vers la BDD************** -->
+    <?php }
+    $reponse->closeCursor(); // Termine le traitement de la requête
+    ?>
 
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

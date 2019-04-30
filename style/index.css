@@ -22,9 +22,10 @@ body {
   max-height: 100em;
 }
 
-.titreslide {}
-
-.textslide {}
+#slideraccueil h5, #slideraccueil p {
+  background-color: black;
+  opacity: 0.8;
+}
 
 .carousel-item img {
   max-height: 100vh;
@@ -37,16 +38,19 @@ body {
 
 /*************pour le carousel***************/
 .Container {
-  width: 500px;
+  width: 31.25em;
   height: 23em;
   margin: 0 auto;
   position: relative;
   top: 30px;
   left: 0;
+  display: flex;
+  flex: 1 1 auto;
 }
 
 .Items {
   position: absolute;
+  flex: 1 1 auto;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -54,6 +58,7 @@ body {
 }
 
 .Carousel {
+  flex: 1 1 auto;
   margin: 0;
   padding: 0;
 }
@@ -62,6 +67,7 @@ body {
   list-style: none;
   width: 25em;
   max-height: 20em;
+  flex: 1 1 auto;
 }
 
 .Carousel li:hover {
@@ -71,46 +77,51 @@ body {
 /*image centrale.*/
 .Front {
   z-index: 3000;
+  flex: 1 1 auto;
 }
 
 /*image de gauche.*/
 .Left {
-  left: -200px;
+  left: -12.5em;
   z-index: 1000;
   opacity: 0.6;
   -webkit-transform: scale(.75);
   -moz-transform: scale(.75);
   transform: scale(.75);
+  flex: 1 1 auto;
 }
 
 /*image de gauche.*/
 .Left2 {
-  left: -400px;
+  left: -25em;
   z-index: 1000;
   opacity: 0.4;
   -webkit-transform: scale(.50);
   -moz-transform: scale(.50);
   transform: scale(.50);
+  flex: 1 1 auto;
 }
 
 /*image de droite.*/
 .Right {
-  left: 200px;
+  left: 12.5em;
   z-index: 1000;
   opacity: 0.6;
   -webkit-transform: scale(.75);
   -moz-transform: scale(.75);
   transform: scale(.75);
+  flex: 1 1 auto;
 }
 
 /*image de droite.*/
 .Right2 {
-  left: 400px;
+  left: 25em;
   z-index: 1000;
   opacity: 0.4;
   -webkit-transform: scale(.50);
   -moz-transform: scale(.50);
   transform: scale(.50);
+  flex: 1 1 auto;
 }
 
 .Scale {
@@ -131,6 +142,8 @@ body {
   max-height: 20em;
   border-radius: 8px;
   border: 1px solid #000;
+  flex: 1 1 auto;
+  max-height: 20em;
 }
 
 /******************* text + image********************/
