@@ -128,12 +128,18 @@ body {
 }
 
 .Items img {
-  /*font-family: oswald;
-  font-size: 200px;
-  text-align: center;
-  color: #FFF;
-  text-shadow: #000 0px 1px;*/
   max-height: 20em;
   border-radius: 8px;
   border: 1px solid #000;
+}
+
+/******************* text + image********************/
+.container-fluid {
+  color: white;
+}
+
+h5 {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
 }

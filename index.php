@@ -61,7 +61,8 @@
         </div>
       </div>
 
-        <div class="Container">
+      <!--****************************mini-carousel********************** -->
+        <div class="Container container-fluid">
           <ul class="Carousel">
             <li class="Items Front"><img src="img/3.jpg" class="w-100" alt="..."></li>
             <li class="Items Left"><img src="img/7.jpg" class="w-100" alt="..."></li>
@@ -75,6 +76,47 @@
       <!--**************************parallax*********************** -->
       <div class="parallax-window" data-parallax="scroll" data-image-src="img/shining.jpg"></div>
 
+
+      <div class="container-fluid">
+          <div class="row">
+            <h5>ALLOCINE<strong>MET</strong></h5>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+                <img src="img/matrix.jpg" style="max-width: 100%; max-height: 50em;">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Corporis sequi corrupti fuga? Neque ex
+                illum  tempore
+                distinctio, expedita nostrum nisi at dignissimos vel
+                fuga veritatis quia. Tempore, ullam amet.  Iste.
+              </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Corporis sequi corrupti fuga? Neque exillum
+                tempore distinctio, expedita nostrum nisi at
+                dignissimos vel fuga veritatis quia. Tempore, ullam
+                amet.Iste.
+              </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sequi corrupti fuga? Neque ex
+                illum
+                tempore
+                distinctio, expedita nostrum nisi at dignissimos vel fuga veritatis quia. Tempore, ullam amet.
+                Iste.
+              </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sequi corrupti fuga? Neque ex
+                illum
+                tempore
+                distinctio, expedita nostrum nisi at dignissimos vel fuga veritatis quia. Tempore, ullam amet.
+                Iste.
+              </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sequi corrupti fuga? Neque ex
+                illum
+                tempore
+                distinctio, expedita nostrum nisi at dignissimos vel fuga veritatis quia. Tempore, ullam amet.
+                Iste.
+              </p>
+            </div>
+          </div>
+      </div>
       <!-- *****************inclusion du footer********************-->
       <?php include 'footer.php'; ?>
 
