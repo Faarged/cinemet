@@ -1,14 +1,24 @@
 <header>
-  <nav class="fixed-top" id="link_nav">
-    <a href="index.php" class="mt-2" id="logo">ALLOCINE<strong>MET</strong></a>
-    <div id="Navbar">
-      <a href="index.php">ACCUEIL </a>
-      <a href="film.php">FILM </a>
-      <a href="#">ACTEURS </a>
-      <a href="#">REALISATEURS </a>
-    </div>
-    <div class="m-nav-toggle">
-      <span class="m-toggle-icon"></span>
+  <nav class="navbar navbar-expand-lg fixed-top" id="link_nav">
+    <a class="navbar-brand" href="index.php">ALLOCINE<strong>MET</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.php">ACCUEIL <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="film.php">FILM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">ACTEURS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">REALISATEURS</a>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
