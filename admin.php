@@ -18,7 +18,7 @@
 
         <p class="description">Admin vous permet d'ajouter un nouveau Film.</p>
 
-
+        <!--création du formulaire-->
         <form action="admin.php" method="post" id="formulaire">
             <p>
             <label for="titre">TITRE</label> : <input type="text" name="titre" id="titre"  /><br />
@@ -30,13 +30,13 @@
             <label for="realisateur">REALISATEUR</label> : <input type="text" name="realisateur" id="realisateur"  /><br />
             <label for="acteur">ACTEUR</label> :  <input type="text" name="acteur" id="acteur" /><br />
             <label for="genre">GENRE</label> :  <input type="text" name="genre" id="genre" /><br />
-
+            <!--bouton pour valider l'ajout du film -->
             <input type="submit" value="Envoyer" />
         </p>
         </form>
 
 <?php
-
+//connexion à ma bdd en utilisant la page comabdd
 require_once 'comabdd.php';
 
 // Insertion du message à l'aide d'une requête préparée
