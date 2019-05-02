@@ -25,7 +25,7 @@
       // Si tout va bien, on peut continuer
 
       // On récupère tout le contenu de la table film
-      $reponse = $bdd->query('SELECT * FROM film');
+      $reponse = $bdd->query('SELECT affiche, titre FROM film');
       // On affiche chaque entrée une à une
       while ($donnees = $reponse->fetch())
       {
