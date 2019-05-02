@@ -81,13 +81,13 @@
             <li class="Items Right2"><img src="img/5.jpg" class="w-100" alt="..."></li>
           </ul>
         </div>
-      <!--  <div class="owl-carousel">
+       <!--<div class="owl-carousel container-fluid" id="owlcarousel">
           <div class="item"><img src="img/3.jpg" class="w-100 autoHeight" alt="..."></div>
           <div class="item"><img src="img/7.jpg" class="w-100 autoHeight" alt="..."></div>
           <div class="item"><img src="img/9.jpg" class="w-100 autoHeight" alt="..."></div>
           <div class="item"><img src="img/1.jpg" class="w-100 autoHeight" alt="..."></div>
           <div class="item"><img src="img/5.jpg" class="w-100 autoHeight" alt="..."></div>
-        </div> -->
+        </div>-->
 
 
       <!--**************************parallax*********************** -->
@@ -150,9 +150,9 @@
       <script src="js/parallax.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script>
-      $(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
+    /*  $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+      });*/
         $(function(){
           var front = $('.Front'),
               others = ['Left2', 'Left', 'Right', 'Right2'];
