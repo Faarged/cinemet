@@ -37,17 +37,10 @@
 
 <?php
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=phpmyadmin;charset=utf8', 'phpmyadmin', 'pioupiou');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+require_once 'comabdd.php';
 
 // Insertion du message à l'aide d'une requête préparée
-$req = $bdd->prepare('INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer, realisateur, acteur, genre) VALUES(?, ?, ?, ?,?, ?, ?, ?, ?)');
+$req = $bdd->prepare('INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer, realisateur, acteur, genre) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)');
 $req->execute(array($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer'], $_POST['realisateur'], $_POST['acteur'], $_POST['genre']));
 
 
