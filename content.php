@@ -58,8 +58,8 @@
 
     <!-- pour la partie récap d'infos et la bande annonce -->
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
+  <div class="row" id="description">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
       <div class="list-group">
         <a href="realisateur.html" class="list-group-item list-group-item-action">
           <div class="d-flex w-100 justify-content-between">
@@ -82,8 +82,8 @@
       </div>
     </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8">
-    <iframe class="p-3 rounded" src="<?php echo $donnees['trailer']; ?>" height="100%" width="100%"></iframe>
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+    <iframe src="<?php echo $donnees['trailer']; ?>" height="100%" width="100%"></iframe>
   </div>
 
 </div> <!-- fin row-->

@@ -18,3 +18,11 @@
 #link_nav a:hover {
   color: grey;
 }
+
+.navbar-toggler{
+  background-color: white;
+}
+
+.navbar-toggler:hover{
+  background: blue;
+}
