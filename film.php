@@ -37,11 +37,11 @@
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <div class="menu_films">
                     <ul id="menu-accordeon">
-                      
+
                         <input type="search" id="site-search" name="q" aria-label="Search through site content">
                         <button>Rechercher</button>
 
-                        <li><a href="#" class="collapsible">Action</a></li>
+                        <li><a href="film.php?id='action'" class="collapsible">Action</a></li>
                         <li><a href="#" class="collapsible">Horreur</a></li>
                         <li><a href="#" class="collapsible">Comédie</a></li>
                         <li><a href="#" class="collapsible">Thriller</a></li>
@@ -95,7 +95,7 @@
                       // Si tout va bien, on peut continuer
 
                       // On récupère tout le contenu de la table film
-                      $reponse = $bdd->query('SELECT affiche, titre, id_film FROM film');
+                    $reponse = $bdd->query('SELECT affiche, titre, id_film FROM film' /*WHERE genre=' .$_GET['id']*/);
                       // On affiche chaque entrée une à une
                       while ($donnees = $reponse->fetch())
                       {
