@@ -18,20 +18,7 @@
   </head>
 
     <body>
-      <!-- je connecte ma base de données -->
-      <?php
-      require_once 'comabdd.php';
 
-      // Si tout va bien, on peut continuer
-
-      // On récupère tout le contenu de la table film
-      $reponse = $bdd->query('SELECT affiche, titre FROM film');
-      // On affiche chaque entrée une à une
-      while ($donnees = $reponse->fetch())
-      {
-      //foreach ($donnees as $film){
-
-      ?>
 
         <!--//////////////////////////////  NAVBAR  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
 
@@ -142,37 +129,33 @@
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <div class="liens_films fadeInUp animated">
                     <div class="titre"> Nouveautés </div><br>
-                    <a href="content.php?id=1"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
+                    <div>
+                      <!-- je connecte ma base de données -->
+                      <?php
+                      require_once 'comabdd.php';
+
+                      // Si tout va bien, on peut continuer
+
+                      // On récupère tout le contenu de la table film
+                      $reponse = $bdd->query('SELECT affiche, titre, id_film FROM film');
+                      // On affiche chaque entrée une à une
+                      while ($donnees = $reponse->fetch())
+                      {
+                      //foreach ($donnees as $film){
+
+                      ?>
+
+                    <a href="content.php?id=<?php echo $donnees['id_film']; ?>"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
                         <p><?php echo $donnees['titre']; ?></p>
                     </a>
-                    <a href="content.php?id=2"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                    <a href="content.php?id=3"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                    <a href="content.php?id=4"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                    <a href="content.php?id=5"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                    <a href="content.php?id=6"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                    <a href="content.php?id=7"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                    <a href="content.php?id=8"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                    <a href="content.php?id=9"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                    <a href="content.php?id=10"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
-                        <p><?php echo $donnees['titre']; ?></p>
-                    </a>
-                </div>
+                    <!-- ************Je ferme ma requete vers la BDD************** -->
+                  <?php }
+
+                  $reponse->closeCursor(); // Termine le traitement de la requête
+
+                  ?>
+                    </div>
+
               </div> <!-- fin col-->
             </div> <!-- fin row-->
           </div> <!-- fin container-->
@@ -185,12 +168,7 @@
 
         <div><a id="cRetour" class="cInvisible" href="#nosfilms"></a></div>
 
-        <!-- ************Je ferme ma requete vers la BDD************** -->
-      <?php }
 
-      $reponse->closeCursor(); // Termine le traitement de la requête
-
-      ?>
 
         <!--//////////////////////////////  SCRIPTS  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>

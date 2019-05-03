@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="style/animate.css">
+      <link rel="stylesheet" href="style/flick.css"/>
       <link rel="stylesheet" href="style/owl.carousel.min.css">
       <link rel="stylesheet" href="style/index.css">
       <link rel="stylesheet" href="style/header.css">
@@ -72,7 +73,7 @@
       </div>
 
       <!--****************************mini-carousel********************** -->
-        <div class="Container container-fluid">
+      <!--  <div class="Container container-fluid">
           <ul class="Carousel">
             <li class="Items Front"><img src="img/3.jpg" class="w-100" alt="..."></li>
             <li class="Items Left"><img src="img/7.jpg" class="w-100" alt="..."></li>
@@ -80,7 +81,7 @@
             <li class="Items Right"><img src="img/1.jpg" class="w-100" alt="..."></li>
             <li class="Items Right2"><img src="img/5.jpg" class="w-100" alt="..."></li>
           </ul>
-        </div>
+        </div>-->
        <!--<div class="owl-carousel container-fluid" id="owlcarousel">
           <div class="item"><img src="img/3.jpg" class="w-100 autoHeight" alt="..."></div>
           <div class="item"><img src="img/7.jpg" class="w-100 autoHeight" alt="..."></div>
@@ -88,7 +89,37 @@
           <div class="item"><img src="img/1.jpg" class="w-100 autoHeight" alt="..."></div>
           <div class="item"><img src="img/5.jpg" class="w-100 autoHeight" alt="..."></div>
         </div>-->
-
+        <!-- Flickity HTML init -->
+<div class="carousel js-flickity">
+  <!-- images from unsplash.com -->
+  <div class="carousel-cell">
+    <img src="img/matrix.jpg" alt="affiche matrix" />
+  </div>
+  <div class="carousel-cell">
+    <img src="img/shining.jpg" alt="affiche shining" />
+  </div>
+  <div class="carousel-cell">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
+  </div>
+  <div class="carousel-cell">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
+  </div>
+  <div class="carousel-cell">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
+  </div>
+  <div class="carousel-cell">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
+  </div>
+  <div class="carousel-cell">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" alt="contrail" />
+  </div>
+  <div class="carousel-cell">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" alt="golden hour" />
+  </div>
+  <div class="carousel-cell">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" alt="flight formation" />
+  </div>
+</div>
 
       <!--**************************parallax*********************** -->
       <div class="parallax-window" data-parallax="scroll" data-image-src="img/salle.jpg"></div>
@@ -141,7 +172,7 @@
     <?php }
     $reponse->closeCursor(); // Termine le traitement de la requête
     ?>
-
+      <script src="js/flick.js"></script>
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
