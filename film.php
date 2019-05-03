@@ -90,7 +90,7 @@
                     <div class="mesfilms">
                       <!-- je connecte ma base de données -->
                       <?php
-                      require_once 'comabdd.php';
+                      require_once 'php/comabdd.php';
 
                       // Si tout va bien, on peut continuer
 

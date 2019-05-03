@@ -20,7 +20,7 @@
     <body>
       <?php
       //j'appelle ma connexion a la bdd
-      require_once 'comabdd.php';
+      require_once 'php/comabdd.php';
       //je stock ma bdd ds une variable reponse
       $reponse = $bdd->query("SELECT * FROM film");
       // On affiche chaque entrée une à une grace à la boucle while, la variable donnees contient 1 ligne par 1 ligne

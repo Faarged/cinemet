@@ -27,9 +27,9 @@
   <!-- je connecte ma base de données -->
   <?php
   //j'appelle ma connexion a la bdd
-  require_once 'comabdd.php';
+  require_once 'php/comabdd.php';
   //je stock ma bdd ds une variable reponse en lui disant de prendre pour id_film l'id du lien choisi
-  $reponse = $bdd->query("SELECT * FROM film WHERE id_film=" .$_GET["id"]);
+  include 'php/requetecontent.php';
   // On affiche chaque entrée une à une grace à la boucle while, la variable donnees contient 1 ligne par 1 ligne
   while ($donnees = $reponse->fetch())
   {
