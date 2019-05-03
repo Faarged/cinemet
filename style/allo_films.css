@@ -145,7 +145,7 @@ button {
 }
 
 /********************************** LIENS FILMS ***********************************/
-.liens_films {
+.mesfilms {
   overflow: hidden;
   border-radius: 15px 15px 15px 15px;
   margin-top: 20px;
@@ -162,7 +162,7 @@ button {
   border-right: solid 5px #4747478a;
 }
 
-.liens_films p {
+.mesfilms p {
   text-align: center;
   font-size: 20px;
   font-family: 'Poiret One', cursive;
@@ -170,10 +170,13 @@ button {
   margin-bottom: 0em;
   margin-top: -0.3em;
   color: white;
+  text-overflow: clip;
 }
 
 .liens_films a {
   text-decoration: none;
+  width: 33%;
+  text-align: center;
 }
 
 .titre {

@@ -129,7 +129,7 @@
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <div class="liens_films fadeInUp animated">
                     <div class="titre"> Nouveautés </div><br>
-                    <div>
+                    <div class="mesfilms">
                       <!-- je connecte ma base de données -->
                       <?php
                       require_once 'comabdd.php';
