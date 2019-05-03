@@ -81,28 +81,13 @@ button {
   width: 80%;
 }
 
-#menu-accordeon ul {
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
+
 
 #menu-accordeon li {
   margin-top: 30px;
   background-color: #014363;
   border-radius: 6px;
   margin-bottom: 2px;
-}
-
-#menu-accordeon li li {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 2s;
-  border-radius: 0;
-  background: #0715A8;
-  box-shadow: none;
-  border: none;
-  margin: 0
 }
 
 #menu-accordeon a {
@@ -123,11 +108,7 @@ button {
 }
 
 #menu-accordeon li:hover {
-  background: #616161
-}
-
-#menu-accordeon li li:hover {
-  background: #999;
+  background: #0715A8;
 }
 
 #menu-accordeon ul li:last-child {
@@ -145,21 +126,23 @@ button {
 }
 
 /********************************** LIENS FILMS ***********************************/
-.mesfilms {
-  overflow: hidden;
+.liens_films{
   border-radius: 15px 15px 15px 15px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   background-color: #014363;
   border-left: solid 5px #4747478a;
   border-top: solid 5px #4747478a;
   border-bottom: solid 5px #4747478a;
   border-right: solid 5px #4747478a;
+}
+.mesfilms {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .mesfilms p {
