@@ -71,9 +71,9 @@
           </a>
         </div>
       </div>
-    <?php }
-    $reponse->closeCursor(); // Termine le traitement de la requête
-    ?>
+      <?php }
+      $reponse->closeCursor(); // Termine le traitement de la requête
+      ?>
 
       <!--****************************mini-carousel********************** -->
       <!--  <div class="Container container-fluid">
@@ -93,29 +93,29 @@
           <div class="item"><img src="img/5.jpg" class="w-100 autoHeight" alt="..."></div>
         </div>-->
         <!-- Flickity HTML init -->
-<div class="carousel js-flickity">
-  <!-- images from unsplash.com -->
-  <?php
-  require_once 'php/comabdd.php';
+      <div class="carousel js-flickity">
+        <!-- images from unsplash.com -->
+        <?php
+        require_once 'php/comabdd.php';
 
-  // Si tout va bien, on peut continuer
+        // Si tout va bien, on peut continuer
 
-  // On récupère tout le contenu de la table film
-  $reponse = $bdd->query('SELECT affiche, titre, id_film FROM film LIMIT 9');
-  // On affiche chaque entrée une à une
-  while ($donnees = $reponse->fetch())
-  {
+        // On récupère tout le contenu de la table film
+        $reponse = $bdd->query('SELECT affiche, titre, id_film FROM film LIMIT 9');
+        // On affiche chaque entrée une à une
+        while ($donnees = $reponse->fetch())
+        {
 
-  ?>
-  <div class="carousel-cell">
-    <a href="content.php?id=<?php echo $donnees['id_film']; ?>"><img src="<?php echo $donnees['affiche']; ?>" alt="<?php echo $donnees['titre']; ?>" /></a>
-  </div>
+        ?>
+        <div class="carousel-cell">
+          <a href="content.php?id=<?php echo $donnees['id_film']; ?>"><img src="<?php echo $donnees['affiche']; ?>" alt="<?php echo $donnees['titre']; ?>" /></a>
+        </div>
 
-  <?php }
-  $reponse->closeCursor(); // Termine le traitement de la requête
-  ?>
+        <?php }
+        $reponse->closeCursor(); // Termine le traitement de la requête
+        ?>
 
-</div> <!-- fin du mini carousel-->
+      </div> <!-- fin du mini carousel-->
 
       <!--**************************parallax*********************** -->
       <div class="parallax-window" data-parallax="scroll" data-image-src="img/salle.jpg"></div>
