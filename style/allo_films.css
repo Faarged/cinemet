@@ -173,7 +173,7 @@ button {
 
 .liens_films a {
   text-decoration: none;
-  width: 33%;
+  max-width: 33%;
   text-align: center;
 }
 
