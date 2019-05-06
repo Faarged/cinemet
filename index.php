@@ -71,6 +71,9 @@
           </a>
         </div>
       </div>
+    <?php }
+    $reponse->closeCursor(); // Termine le traitement de la requête
+    ?>
 
       <!--****************************mini-carousel********************** -->
       <!--  <div class="Container container-fluid">
@@ -92,34 +95,27 @@
         <!-- Flickity HTML init -->
 <div class="carousel js-flickity">
   <!-- images from unsplash.com -->
+  <?php
+  require_once 'php/comabdd.php';
+
+  // Si tout va bien, on peut continuer
+
+  // On récupère tout le contenu de la table film
+  $reponse = $bdd->query('SELECT affiche, titre, id_film FROM film LIMIT 9');
+  // On affiche chaque entrée une à une
+  while ($donnees = $reponse->fetch())
+  {
+
+  ?>
   <div class="carousel-cell">
-    <img src="img/matrix.jpg" alt="affiche matrix" />
+    <a href="content.php?id=<?php echo $donnees['id_film']; ?>"><img src="<?php echo $donnees['affiche']; ?>" alt="<?php echo $donnees['titre']; ?>" /></a>
   </div>
-  <div class="carousel-cell">
-    <img src="img/shining.jpg" alt="affiche shining" />
-  </div>
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
-  </div>
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
-  </div>
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
-  </div>
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
-  </div>
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" alt="contrail" />
-  </div>
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" alt="golden hour" />
-  </div>
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" alt="flight formation" />
-  </div>
-</div>
+
+  <?php }
+  $reponse->closeCursor(); // Termine le traitement de la requête
+  ?>
+
+</div> <!-- fin du mini carousel-->
 
       <!--**************************parallax*********************** -->
       <div class="parallax-window" data-parallax="scroll" data-image-src="img/salle.jpg"></div>
@@ -169,9 +165,7 @@
       <?php include 'footer.php'; ?>
 
       <!-- ************Je ferme ma requete vers la BDD************** -->
-    <?php }
-    $reponse->closeCursor(); // Termine le traitement de la requête
-    ?>
+
       <script src="js/flick.js"></script>
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

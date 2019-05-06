@@ -81,13 +81,28 @@ button {
   width: 80%;
 }
 
-
+#menu-accordeon ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
 
 #menu-accordeon li {
   margin-top: 30px;
   background-color: #014363;
   border-radius: 6px;
   margin-bottom: 2px;
+}
+
+#menu-accordeon li li {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 2s;
+  border-radius: 0;
+  background: #444;
+  box-shadow: none;
+  border: none;
+  margin: 0
 }
 
 #menu-accordeon a {

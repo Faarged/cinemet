@@ -42,11 +42,11 @@
                         <button>Rechercher</button>
 
                         <li><a href="film.php?id='action'" class="collapsible">Action</a></li>
-                        <li><a href="#" class="collapsible">Horreur</a></li>
-                        <li><a href="#" class="collapsible">Comédie</a></li>
-                        <li><a href="#" class="collapsible">Thriller</a></li>
-                        <li><a href="#" class="collapsible">Drame</a></li>
-                        <li><a href="#" class="collapsible">Romantique</a></li>
+                        <li><a href="film.php?id='horreur'" class="collapsible">Horreur</a></li>
+                        <li><a href="film.php?id='comedie'" class="collapsible">Comédie</a></li>
+                        <li><a href="film.php?id='thriller'" class="collapsible">Thriller</a></li>
+                        <li><a href="film.php?id='drame'" class="collapsible">Drame</a></li>
+                        <li><a href="film.php?id='romantique'" class="collapsible">Romantique</a></li>
                     </ul>
                 </div> <!--fin menu film-->
 
@@ -58,24 +58,12 @@
                         <button>Rechercher</button>
                         <li><a href="#" class="collapsible">Films</a>
                             <ul>
-                                <li><a href="#" class="collapsible">Action</a>
-
-                                </li>
-                                <li><a href="#" class="collapsible">Science-fiction</a>
-
-                                </li>
-                                <li><a href="#" class="collapsible">Comédie</a>
-
-                                </li>
-                                <li><a href="#" class="collapsible">Drame</a>
-
-                                </li>
-                                <li><a href="#" class="collapsible">Animation</a>
-
-                                </li>
-                                <li><a href="#" class="collapsible">Horreur</a>
-
-                                </li>
+                                <li><a href="film.php?id='action'" class="collapsible">Action</a></li>
+                                <li><a href="film.php?id='horreur'" class="collapsible">Horreur</a></li>
+                                <li><a href="film.php?id='comedie'" class="collapsible">Comédie</a></li>
+                                <li><a href="film.php?id='thriller'" class="collapsible">Thriller</a></li>
+                                <li><a href="film.php?id='drame'" class="collapsible">Drame</a></li>
+                                <li><a href="film.php?id='romantique'" class="collapsible">Romantique</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -99,7 +87,6 @@
                       // On affiche chaque entrée une à une
                       while ($donnees = $reponse->fetch())
                       {
-                      //foreach ($donnees as $film){
 
                       ?>
 
