@@ -99,7 +99,7 @@ button {
   overflow: hidden;
   transition: all 2s;
   border-radius: 0;
-  background: #444;
+  background: #014363;
   box-shadow: none;
   border: none;
   margin: 0
@@ -321,7 +321,7 @@ a#cRetour.cInvisible {
     margin-top: 20px;
     margin-bottom: 10px;
     padding-bottom: 25px;
-    background-color: #dadba7;
+    background-color: #0C0163;
     height: auto;
     border-top: solid 5px #4747478a;
     border-bottom: solid 5px #4747478a;
