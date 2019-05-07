@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer class="animated slideInRight" id="footer">
   <div class="container-fluid">
     <div class="row une">
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
