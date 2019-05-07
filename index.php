@@ -128,36 +128,35 @@
                 <img class="animated slideInLeft" src="img/matrix.jpg" style="max-width: 100%; max-height: 50em;">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Corporis sequi corrupti fuga? Neque ex
-                illum  tempore
-                distinctio, expedita nostrum nisi at dignissimos vel
-                fuga veritatis quia. Tempore, ullam amet.  Iste.
-              </p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Corporis sequi corrupti fuga? Neque exillum
-                tempore distinctio, expedita nostrum nisi at
-                dignissimos vel fuga veritatis quia. Tempore, ullam
-                amet.Iste.
-              </p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sequi corrupti fuga? Neque ex
-                illum
-                tempore
-                distinctio, expedita nostrum nisi at dignissimos vel fuga veritatis quia. Tempore, ullam amet.
-                Iste.
-              </p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sequi corrupti fuga? Neque ex
-                illum
-                tempore
-                distinctio, expedita nostrum nisi at dignissimos vel fuga veritatis quia. Tempore, ullam amet.
-                Iste.
-              </p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sequi corrupti fuga? Neque ex
-                illum
-                tempore
-                distinctio, expedita nostrum nisi at dignissimos vel fuga veritatis quia. Tempore, ullam amet.
-                Iste.
-              </p>
+              <p>Le cinéma METROPOLIS naît d’une réflexion menée en 1997.
+                Il paraît alors en effet certain que les 5 salles
+                du cinéma «LES CLUBS» et la salle du «FORUM» ne
+                correspondraient rapidement plus aux attentes du
+                public. La restructuration complète des deux
+                établissements est rapidement abandonnée.
+                Un projet de construction d’un multiplexe de
+                10 salles est alors conduit.</p>
+              <p>La décoration du cinéma METROPOLIS repose
+                principalement sur deux grandes toiles tirées
+                du film éponyme de Ftritz LANG (1928). La
+                passerelle du hall ainsi que le traitement du
+                sol rejoignent les décors du film.
+                Volontairement, les systèmes techniques
+                (gaines de ventilation et chemins électriques)
+                ont été laissés apparents.</p>
+              <p>Le Cinéma METROPOLIS est situé en centre-ville, à 300 mètres de la place Ducale, coeur historique de Charleville-Mézières.
+                L'arrivée de la "voie rapide", elle aussi à 300 mètres du cinéma, permet un accès direct et facile pour ceux qui viennent par la route.
+                Le parking est gratuit tous les jours de 12h00 à 14h00 et après 18h30 jusqu'au lendemain 9h00.
+                Il est gratuit le dimanche toute la journée.
+                La première heure et demie est gratuite le mercredi, le vendredi après-midi et le samedi.</p>
+                <p>
+                  Le CINÉ-CAFÉ est à votre disposition pour
+                  prendre un verre, vous retrouver ou calmer
+                  une petite faim, avant ou après la séance de cinéma.
+                  Le comptoir CONFISERIE vous propose boissons,
+                  pop-corn, friandises et tout ce qu'il faut
+                  pour un bon moment de cinéma.
+                </p>
             </div>
           </div>
       </div>
