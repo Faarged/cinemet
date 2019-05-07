@@ -5,24 +5,24 @@
         <ul>
           <li><a href="index.php">Accueil</a></li>
           <li><a href="film.php">Nos Films</a></li>
-          <li><a href="#">Les acteurs</a></li>
-          <li><a href="#">Les réalisateurs</a></li>
+          <li><a href="#footer">Les acteurs</a></li>
+          <li><a href="#footer">Les réalisateurs</a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <ul>
-          <li><a href="#">Conditions</a></li>
-          <li><a href="#">Politique de confidentialité</a></li>
-          <li><a href="#">Sécurité</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#footer">Conditions</a></li>
+          <li><a href="#footer">Politique de confidentialité</a></li>
+          <li><a href="#footer">Sécurité</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <ul>
-          <li><a href="#">6 Rue Longueville</a></li>
+          <li><a href="#footer">6 Rue Longueville</a></li>
           <li><a href="https://www.charleville-mezieres.fr">08000 Charleville-Mézières</a></li>
           <li><a href="https://www.cinemet.fr/">metropolis@mail.net</a></li>
-          <li><a href="#">0324332208</a></li>
+          <li><a href="#footer">0324332208</a></li>
         </ul>
       </div>
     </div>

@@ -236,3 +236,36 @@ h5 {
   text-align: center;
   font-size: 2em;
 }
+
+/********************************** BACK TO TOP ***********************************/
+a#cRetour {
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  background: white;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  opacity: 1;
+  z-index: 99999;
+  transition: all ease-in 0.2s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-decoration: none;
+}
+
+a#cRetour:before {
+  content: "\25b2";
+}
+
+a#cRetour:hover {
+  background: black;
+  color: white;
+  transition: all ease-in 0.2s;
+}
+
+a#cRetour.cInvisible {
+  transition: all ease-in 0.5s;
+}

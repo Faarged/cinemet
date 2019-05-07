@@ -162,6 +162,7 @@
       </div>
       <!-- *****************inclusion du footer********************-->
       <?php include 'footer.php'; ?>
+      <div><a id="cRetour" class="cInvisible" href="#slideraccueil"></a></div>
 
       <!-- ************Je ferme ma requete vers la BDD************** -->
 
