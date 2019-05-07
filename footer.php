@@ -5,8 +5,8 @@
         <ul>
           <li><a href="index.php">Accueil</a></li>
           <li><a href="film.php">Nos Films</a></li>
-          <li><a href="#">Je candidate</a></li>
-          <li><a href="film.php">Filmographie</a></li>
+          <li><a href="#">Les acteurs</a></li>
+          <li><a href="#">Les réalisateurs</a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -20,8 +20,8 @@
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <ul>
           <li><a href="#">6 Rue Longueville</a></li>
-          <li><a href="#">08000 Charleville-Mézières</a></li>
-          <li><a href="#">metropolis@mail.net</a></li>
+          <li><a href="https://www.charleville-mezieres.fr">08000 Charleville-Mézières</a></li>
+          <li><a href="https://www.cinemet.fr/">metropolis@mail.net</a></li>
           <li><a href="#">0324332208</a></li>
         </ul>
       </div>
@@ -39,7 +39,7 @@
               <i class="fab fa-twitter"></i></a>
           </li>
           <li class="list-inline-item">
-            <a class="btn-floating mx-1" href="https://github.com/">
+            <a class="btn-floating mx-1" href="https://github.com/Faarged/cinemet">
               <i class="fab fa-github"></i></a>
           </li>
         </ul>
