@@ -11,10 +11,10 @@
       </div>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <ul>
-          <li><a href="#footer">Conditions</a></li>
-          <li><a href="#footer">Politique de confidentialité</a></li>
-          <li><a href="#footer">Sécurité</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="https://www.cinemet.fr/mentions-legales/">Mentions légales</a></li>
+          <li><a href="https://www.cinemet.fr/politique-de-protection-des-donnees-personnelles/">Politique de confidentialité</a></li>
+          <li><a href="https://www.webediamoviespro.fr">©2019 Webedia Movie Pro</a></li>
+          <li><a href="https://www.cinemet.fr/contact/">Contact</a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
