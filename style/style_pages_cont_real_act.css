@@ -89,6 +89,9 @@
   margin-top: 20px;
 }
 
+.trailerfilm{
+  min-height: 300px;
+}
 /********************************** BACK TO TOP ***********************************/
 a#cRetour {
   border-radius: 3px;

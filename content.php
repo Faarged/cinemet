@@ -95,7 +95,7 @@
     </div>
 
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    <iframe src="<?php echo $donnees['trailer']; ?>" height="100%" width="100%"></iframe>
+    <iframe src="<?php echo $donnees['trailer']; ?>" height="100%" width="100%" class='trailerfilm'></iframe>
   </div>
 </div> <!-- fin row-->
 
