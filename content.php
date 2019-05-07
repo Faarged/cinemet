@@ -65,19 +65,31 @@
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Réalisateur</h5>
           </div>
-          <p class="mb-1"><?php echo $donnees['nom_real']; ?>
+          <div>
+
+          <p class="mb-1"><?php echo $donnees['nom_real']; ?></p>
+
+          </div>
         </a>
         <a href="#" class="list-group-item list-group-item-action">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Durée</h5>
           </div>
-          <p class="mb-1"><?php echo $donnees['duree']; ?>
+          <div>
+
+          <p class="mb-1"><?php echo $donnees['duree']; ?></p>
+
+          </div>
         </a>
         <a href="acteur.html" class="list-group-item list-group-item-action">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Acteur vedette</h5>
           </div>
-          <p class="mb-1"><?php echo $donnees['nom_acteur']; ?>
+          <div>
+
+          <p class="mb-1"><?php echo $donnees['nom_acteur']; ?></p>
+
+          </div>
         </a>
       </div>
     </div>
@@ -85,21 +97,20 @@
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
     <iframe src="<?php echo $donnees['trailer']; ?>" height="100%" width="100%"></iframe>
   </div>
-
 </div> <!-- fin row-->
 
   </main>
 
 <?php include 'footer.php'; ?>
 
+<?php }
+$reponse->closeCursor(); // Termine le traitement de la requête
+?>
+
+
   <div><a id="cRetour" class="cInvisible" href="#content"></a></div>
 
-  <!-- ************Je ferme ma requete vers la BDD************** -->
-<?php }
 
-$reponse->closeCursor(); // Termine le traitement de la requête
-
-?>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
