@@ -41,13 +41,18 @@
                         <input type="search" id="site-search" name="q" aria-label="Search through site content">
                         <button>Rechercher</button>
 
-                        <li><a href="film.php?id='action'" class="collapsible">Action</a></li>
-                        <li><a href="film.php?id='horreur'" class="collapsible">Horreur</a></li>
-                        <li><a href="film.php?id='comedie'" class="collapsible">Comédie</a></li>
-                        <li><a href="film.php?id='thriller'" class="collapsible">Thriller</a></li>
-                        <li><a href="film.php?id='drame'" class="collapsible">Drame</a></li>
-                        <li><a href="film.php?id='romantique'" class="collapsible">Romantique</a></li>
-                    </ul>
+                        <?php
+                          require_once 'php/comabdd.php';
+                          $reponse = $bdd->prepare('SELECT id_genre, type FROM genre' /*WHERE genre=' .$_GET['id']*/);
+                          $reponse->execute();
+                          while ($donnees = $reponse->fetch())
+                          {
+                        ?>
+                        <li><a href="film.php?id='<?php echo $donnees['id_genre']; ?>'" class="collapsible"><?php echo $donnees['type']; ?></a></li>
+                        <?php }
+                          $reponse->closeCursor(); // Termine le traitement de la requête
+                        ?>
+                          </ul>
                 </div> <!--fin menu film-->
 
                 <!--//////////////////////////////  LISTE GAUCHE POUR SMARTPHONE  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
@@ -58,12 +63,17 @@
                         <button>Rechercher</button>
                         <li><a href="#" class="collapsible">Films</a>
                             <ul>
-                                <li><a href="film.php?id='action'" class="collapsible">Action</a></li>
-                                <li><a href="film.php?id='horreur'" class="collapsible">Horreur</a></li>
-                                <li><a href="film.php?id='comedie'" class="collapsible">Comédie</a></li>
-                                <li><a href="film.php?id='thriller'" class="collapsible">Thriller</a></li>
-                                <li><a href="film.php?id='drame'" class="collapsible">Drame</a></li>
-                                <li><a href="film.php?id='romantique'" class="collapsible">Romantique</a></li>
+                              <?php
+                                require_once 'php/comabdd.php';
+                                $reponse = $bdd->prepare('SELECT id_genre, type FROM genre' /*WHERE genre=' .$_GET['id']*/);
+                                $reponse->execute();
+                                while ($donnees = $reponse->fetch())
+                                {
+                              ?>
+                              <li><a href="film.php?id='<?php echo $donnees['id_genre']; ?>'" class="collapsible"><?php echo $donnees['type']; ?></a></li>
+                              <?php }
+                                $reponse->closeCursor(); // Termine le traitement de la requête
+                              ?>
                             </ul>
                         </li>
                     </ul>
@@ -88,7 +98,6 @@
                       // On affiche chaque entrée une à une
                       while ($donnees = $reponse->fetch())
                       {
-
                       ?>
 
                     <a href="content.php?id=<?php echo $donnees['id_film']; ?>"><img class="effect " src="<?php echo $donnees['affiche']; ?>" id="action">
