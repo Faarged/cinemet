@@ -89,11 +89,8 @@
                       <!-- je connecte ma base de données -->
                       <?php
                       require_once 'php/comabdd.php';
-
-                      // Si tout va bien, on peut continuer
-
                       // On récupère tout le contenu de la table film
-                    $reponse = $bdd->prepare('SELECT affiche, titre, id_film FROM film' /*WHERE genre=' .$_GET['id']*/);
+                    $reponse = $bdd->prepare('SELECT affiche, titre, id_film FROM film'/*possede genre WHERE film.id_film= possede.id_film AND possede.id_genre= genre.id_genre AND id_genre=' .$_GET['id']*/);
                     $reponse->execute();
                       // On affiche chaque entrée une à une
                       while ($donnees = $reponse->fetch())
