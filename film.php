@@ -83,7 +83,8 @@
                       // Si tout va bien, on peut continuer
 
                       // On récupère tout le contenu de la table film
-                    $reponse = $bdd->query('SELECT affiche, titre, id_film FROM film' /*WHERE genre=' .$_GET['id']*/);
+                    $reponse = $bdd->prepare('SELECT affiche, titre, id_film FROM film' /*WHERE genre=' .$_GET['id']*/);
+                    $reponse->execute();
                       // On affiche chaque entrée une à une
                       while ($donnees = $reponse->fetch())
                       {

@@ -20,7 +20,7 @@
 
         <!--création du formulaire-->
         <form action="admin.php" method="post" id="formulaire">
-            <p>
+          <p>
             <label for="titre">TITRE</label> : <input type="text" name="titre" id="titre"  /><br />
             <label for="duree">DUREE</label> :  <input type="time" name="duree" id="duree" /><br />
             <label for="affiche">AFFICHE</label> :  <input type="text" name="affiche" id="affiche" /><br />
@@ -32,7 +32,7 @@
             <label for="genre">GENRE</label> :  <input type="text" name="genre" id="genre" /><br />
             <!--bouton pour valider l'ajout du film -->
             <input type="submit" value="Envoyer" />
-        </p>
+          </p>
         </form>
 
 <?php
@@ -40,12 +40,56 @@
 require_once 'comabdd.php';
 
 // Insertion du message à l'aide d'une requête préparée
-$req = $bdd->prepare('INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer, realisateur, acteur, genre) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)');
-$req->execute(array($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer'], $_POST['realisateur'], $_POST['acteur'], $_POST['genre']));
+/*if(isset($_POST['submit'])){ //si je clique sur envoyer
+  if(isset($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer'], $_POST['realisateur'], $_POST['acteur'], $_POST['genre'])){
+    if($_POST['titre'] != "" && $_POST['duree'] != "" && $_POST['affiche'] != "" && $_POST['date_sortie'] != "" && $_POST['resume'] != "" && $_POST['trailer'] != "" && $_POST['realisateur'] != "" && $_POST['acteur'] != "" && $_POST['genre'] != ""){
+      $titre=  $_POST['titre'];
+      $duree=  $_POST['duree'];
+      $affiche=  $_POST['affiche'];
+      $date=  $_POST['date_sortie'];
+      $resume=  $_POST['resume'];
+      $trailer=  $_POST['trailer'];
+      $realisateur=  $_POST['realisateur'];
+      $acteur=  $_POST['acteur'];
+      $genre=  $_POST['genre'];
 
+      $insertion = "INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer) VALUES('$titre', '$duree', '$affiche', '$date', '$resume', '$trailer') AND INSERT INTO acteur(nom_acteur) VALUES('$acteur') AND INSERT INTO realisateur(nom_real) VALUES('$realisateur') AND INSERT INTO genre(type) VALUES('$genre')";
 
+      $execute = $bdd->query($insertion);
 
+      if($execute == true){
+        $msgSuccess = "Informations enregistrées avec succès";
+      } else{
+        $msgError = "L'enregistrement n'a pas pu être effectué";
+      }
+    }
+  }
+}*/
 
+$req = $bdd->prepare('INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer) VALUES(?, ?, ?, ?, ?, ?) ');
+$act = $bdd->prepare('INSERT INTO acteur (nom_acteur) VALUES(?)');
+$genr = $bdd->prepare('INSERT INTO realisateur (nom_real) VALUES(?)');
+$reali = $bdd->prepare('INSERT INTO genre (type) VALUES(?)');
+
+$req->execute(array($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer']));
+$act->execute(array($_POST['acteur']));
+$genr->execute(array($_POST['genre']));
+$reali->execute(array($_POST['realisateur']));
+/*$req = $bdd->prepare('INSERT INTO genre (type) VALUES(?)');
+$req->execute(array($_POST['genre']));
+$req = $bdd->prepare('INSERT INTO acteur (acteur) VALUES(?)');
+$req->execute(array($_POST['nom_acteur']));
+$req = $bdd->prepare('INSERT INTO realisateur (realisateur) VALUES(?)');
+$req->execute(array($_POST['nom_real'])); */
 ?>
+      <!--<div>
+        <?php
+        /*if(isset($msgError)){
+          echo $msgError;
+        }elseif(isset($msgSuccess)){
+          echo $msgSuccess;
+        }*/
+        ?>
+      </div>-->
     </body>
 </html>
