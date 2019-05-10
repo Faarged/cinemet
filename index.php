@@ -132,7 +132,7 @@
 
         ?>
         <div class="carousel-cell">
-          <a href="content.php?id=<?php echo $donnees['id_film']; ?>"><img src="<?php echo $donnees['affiche']; ?>" alt="<?php echo $donnees['titre']; ?>" /></a>
+          <a href="content.php?id=<?php echo $donnees['id_film']; ?>"><img src="<?php echo $donnees['affiche']; ?>" id="imgmini" alt="<?php echo $donnees['titre']; ?>" /></a>
         </div>
 
         <?php }
