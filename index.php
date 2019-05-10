@@ -19,11 +19,8 @@
     </head>
     <body>
       <?php
-      //j'appelle ma connexion a la bdd
       require_once 'php/comabdd.php';
-      //je stock ma bdd ds une variable reponse
-      $reponse = $bdd->query("SELECT * FROM film");
-      // On affiche chaque entrée une à une grace à la boucle while, la variable donnees contient 1 ligne par 1 ligne
+      $reponse = $bdd->query("SELECT * FROM film LIMIT 1");
       while ($donnees = $reponse->fetch())
       {
       ?>
@@ -40,21 +37,48 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
+              <?php
+              require_once 'php/comabdd.php';
+              $reponse = $bdd->query("SELECT * FROM film WHERE id_film = 3");
+              while ($donnees = $reponse->fetch())
+              {
+              ?>
               <img src="<?php echo $donnees['affiche']; ?>" class="d-block w-100" alt="...">
+            <?php }
+            $reponse->closeCursor(); // Termine le traitement de la requête
+            ?>
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="titreslide">Cinemet</h5>
                 <p class="textslide">VOTRE lieu de visionnage des meilleurs productions.</p>
               </div>
             </div>
             <div class="carousel-item">
+              <?php
+              require_once 'php/comabdd.php';
+              $reponse = $bdd->query("SELECT * FROM film WHERE id_film = 4");
+              while ($donnees = $reponse->fetch())
+              {
+              ?>
               <img src="<?php echo $donnees['affiche']; ?>" class="d-block w-100" alt="...">
+            <?php }
+            $reponse->closeCursor(); // Termine le traitement de la requête
+            ?>
               <div class="carousel-caption d-none d-md-block">
                 <h5>A l'affiche</h5>
                 <p>les dernières sorties.</p>
               </div>
             </div>
             <div class="carousel-item">
+              <?php
+              require_once 'php/comabdd.php';
+              $reponse = $bdd->query("SELECT * FROM film WHERE id_film = 6");
+              while ($donnees = $reponse->fetch())
+              {
+              ?>
               <img src="<?php echo $donnees['affiche']; ?>" class="d-block w-100" alt="...">
+            <?php }
+            $reponse->closeCursor(); // Termine le traitement de la requête
+            ?>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Nos films</h5>
                 <p>disponibles dans notre filmothèque <a href="film.php">ici</a>.</p>
