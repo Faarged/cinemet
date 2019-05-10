@@ -90,8 +90,13 @@
                       <?php
                       require_once 'php/comabdd.php';
                       // On récupère tout le contenu de la table film
-                    $reponse = $bdd->prepare('SELECT affiche, titre, id_film FROM film'/*possede genre WHERE film.id_film= possede.id_film AND possede.id_genre= genre.id_genre AND id_genre=' .$_GET['id']*/);
-                    $reponse->execute();
+                      $reponse = $bdd->prepare('SELECT affiche, titre, id_film FROM film'/*possede genre WHERE film.id_film= possede.id_film AND possede.id_genre= genre.id_genre AND id_genre=' .$_GET['id']*/);
+                      $reponse->execute();
+                      /*   if($_GET['id'] != ""){
+                        return $reponse = $bdd->prepare('SELECT affiche, titre, id_film FROM film possede genre WHERE film.id_film= possede.id_film AND possede.id_genre= genre.id_genre AND genre.id_genre=' .$_GET['id']);
+                      }else{
+                        return $reponse = $bdd->prepare('SELECT affiche, titre, id_film FROM film');
+                      }*/
                       // On affiche chaque entrée une à une
                       while ($donnees = $reponse->fetch())
                       {
@@ -101,11 +106,11 @@
                         <p><?php echo $donnees['titre']; ?></p>
                     </a>
                     <!-- ************Je ferme ma requete vers la BDD************** -->
-                  <?php }
+                      <?php }
 
-                  $reponse->closeCursor(); // Termine le traitement de la requête
+                      $reponse->closeCursor(); // Termine le traitement de la requête
 
-                  ?>
+                      ?>
                     </div>
 
               </div> <!-- fin col-->
