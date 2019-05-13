@@ -29,7 +29,7 @@
             <label for="titre">TITRE</label> : <input type="text" name="titre" id="titre"  /><br />
             <label for="duree">DUREE</label> :  <input type="time" name="duree" id="duree" /><br />
             <label for="affiche">AFFICHE</label> :  <input type="text" name="affiche" id="affiche" /><br />
-            <label for="date_sortie">DATE_SORTIE</label> : <input type="date_sortie" name="date_sortie" id="date_sortie"  /><br />
+            <label for="date_sortie">DATE_SORTIE</label> : <input type="date" name="date_sortie" id="date_sortie"  /><br />
             <label for="resume">RESUME</label> : <input type="text" name="resume" id="resume"  /><br />
             <label for="trailer">TRAILER</label> :  <input type="text" name="trailer" id="trailer" /><br />
             <label for="realisateur">REALISATEUR</label> : <input type="text" name="realisateur" id="realisateur"  /><br />
@@ -59,10 +59,10 @@
             $acteur=  $_POST['acteur'];
             $genre=  $_POST['genre'];
 
-            $insertion1 = "INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer) VALUES('$titre', '$duree', '$affiche', '$date', '$resume', '$trailer')";
-            $insertion2 = "INSERT INTO acteur (nom_acteur) VALUES('$acteur')";
-            $insertion3 = "INSERT INTO realisateur (nom_real) VALUES('$realisateur')";
-            $insertion4 = "INSERT INTO genre (type) VALUES('$genre')";
+            $insertion1 = "INSERT INTO film  VALUES(NULL, '$titre', '$duree', '$affiche', '$date', '$resume', '$trailer')";
+            $insertion2 = "INSERT INTO acteur VALUES(NULL, '$acteur')";
+            $insertion3 = "INSERT INTO realisateur VALUES(NULL, '$realisateur')";
+            $insertion4 = "INSERT INTO genre VALUES(NULL, '$genre')";
             $execute = $bdd->query($insertion1);
             $execute2 = $bdd->query($insertion2);
             $execute3 = $bdd->query($insertion3);
