@@ -55,7 +55,9 @@
     <!-- pour la description du film -->
 
     <p class="text-center bg-light"><?php echo $donnees['resume']; ?></p>
-
+    <?php }
+    $reponse->closeCursor(); // Termine le traitement de la requête
+    ?>
     <!-- pour la partie récap d'infos et la bande annonce -->
 
   <div class="row" id="description">
@@ -66,9 +68,15 @@
             <h5 class="mb-1">Réalisateur</h5>
           </div>
           <div>
-
+            <?php
+            include 'php/real.php';
+            while ($donnees = $realisateur->fetch())
+            {
+            ?>
           <p class="mb-1"><?php echo $donnees['nom_real']; ?></p>
-
+        <?php }
+        $realisateur->closeCursor(); // Termine le traitement de la requête
+        ?>
           </div>
         </a>
         <a href="#" class="list-group-item list-group-item-action">
@@ -76,9 +84,16 @@
             <h5 class="mb-1">Durée</h5>
           </div>
           <div>
-
+            <?php
+            include 'php/requetecontent.php';
+            // On affiche chaque entrée une à une grace à la boucle while, la variable donnees contient 1 ligne par 1 ligne
+            while ($donnees = $reponse->fetch())
+            {
+            ?>
           <p class="mb-1"><?php echo $donnees['duree']; ?></p>
-
+        <?php }
+        $reponse->closeCursor(); // Termine le traitement de la requête
+        ?>
           </div>
         </a>
         <a href="acteur.html" class="list-group-item list-group-item-action">
@@ -86,14 +101,26 @@
             <h5 class="mb-1">Acteur vedette</h5>
           </div>
           <div>
-
+            <?php
+            include 'php/acteur.php';
+            // On affiche chaque entrée une à une grace à la boucle while, la variable donnees contient 1 ligne par 1 ligne
+            while ($donnees = $acteur->fetch())
+            {
+            ?>
           <p class="mb-1"><?php echo $donnees['nom_acteur']; ?></p>
-
+        <?php }
+        $acteur->closeCursor(); // Termine le traitement de la requête
+        ?>
           </div>
         </a>
       </div>
     </div>
-
+    <?php
+    include 'php/requetecontent.php';
+    // On affiche chaque entrée une à une grace à la boucle while, la variable donnees contient 1 ligne par 1 ligne
+    while ($donnees = $reponse->fetch())
+    {
+    ?>
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
     <iframe src="<?php echo $donnees['trailer']; ?>" height="100%" width="100%" class='trailerfilm'></iframe>
   </div>
@@ -102,10 +129,10 @@
   </main>
 
 <?php include 'footer.php'; ?>
-
 <?php }
 $reponse->closeCursor(); // Termine le traitement de la requête
 ?>
+
 
 
   <div><a id="cRetour" class="cInvisible" href="#content"></a></div>
