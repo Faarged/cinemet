@@ -60,7 +60,7 @@
                         <button>Rechercher</button>
 
                         <?php
-                          $reponse = $bdd->prepare('SELECT id_genre, type FROM genre' /*WHERE genre=' .$_GET['id']*/);
+                          $reponse = $bdd->prepare('SELECT id_genre, type FROM genre');
                           $reponse->execute();
                           while ($donnees = $reponse->fetch())
                           {

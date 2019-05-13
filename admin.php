@@ -123,6 +123,7 @@ $req = $bdd->prepare('INSERT INTO realisateur (realisateur) VALUES(?)');
 $req->execute(array($_POST['nom_real'])); */-->
 
         <div>
+          <p>
           <?php
           if(isset($msgError)){
             echo $msgError;
@@ -130,6 +131,7 @@ $req->execute(array($_POST['nom_real'])); */-->
             echo $msgSuccess;
           }
           ?>
+          </p>
         </div>
       </div>
 
