@@ -48,21 +48,51 @@
       // Insertion du message à l'aide d'une requête préparée
       if(isset($_POST['submit'])){ //si je clique sur envoyer
         if(isset($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer'], $_POST['realisateur'], $_POST['acteur'], $_POST['genre'])){
-          //if($_POST['titre'] && $_POST['duree'] && $_POST['affiche'] && $_POST['date_sortie'] && $_POST['resume'] && $_POST['trailer'] && $_POST['realisateur'] && $_POST['acteur'] && $_POST['genre']){
-            $titre=  $_POST['titre'];
-            $duree=  $_POST['duree'];
-            $affiche=  $_POST['affiche'];
-            $date=  $_POST['date_sortie'];
-            $resume=  $_POST['resume'];
-            $trailer=  $_POST['trailer'];
-            $realisateur=  $_POST['realisateur'];
-            $acteur=  $_POST['acteur'];
-            $genre=  $_POST['genre'];
 
-            $insertion1 = "INSERT INTO film  VALUES(NULL, '$titre', '$duree', '$affiche', '$date', '$resume', '$trailer')";
-            $insertion2 = "INSERT INTO acteur VALUES(NULL, '$acteur')";
-            $insertion3 = "INSERT INTO realisateur VALUES(NULL, '$realisateur')";
-            $insertion4 = "INSERT INTO genre VALUES(NULL, '$genre')";
+          $titre=  $_POST['titre'];
+          $duree=  $_POST['duree'];
+          $affiche=  $_POST['affiche'];
+          $date=  $_POST['date_sortie'];
+          $resume=  $_POST['resume'];
+          $trailer=  $_POST['trailer'];
+          $realisateur=  $_POST['realisateur'];
+          $acteur=  $_POST['acteur'];
+          $genre=  $_POST['genre'];
+
+          $req = $bdd->prepare('INSERT INTO film(titre, duree, affiche, date_sortie, resume, trailer)
+          VALUES(:titre, :duree, :affiche, :date_sortie, :resume, :trailer)');
+          $req->execute(array(
+            'titre' => $titre,
+            'duree' => $duree,
+            'affiche' => $affiche,
+            'date_sortie' => $date,
+            'resume' => $resume,
+            'trailer' => $trailer
+          ));
+
+          $req2 = $bdd->prepare('INSERT INTO realisateur(nom_real)
+          VALUES(:nom_real)');
+          $req2 ->execute(array(
+            'nom_real' => $realisateur
+          ));
+
+          $req3 = $bdd->prepare('INSERT INTO acteur(nom_acteur)
+          VALUES(:nom_acteur)');
+          $req3 ->execute(array(
+            'nom_acteur' => $acteur
+          ));
+
+          $req4 = $bdd->prepare('INSERT INTO genre(type)
+          VALUES(:type)');
+          $req4 ->execute(array(
+            'type' => $genre
+          ));
+
+
+            /*$insertion1 = "INSERT INTO film  VALUES('$titre', '$duree', '$affiche', '$date', '$resume', '$trailer')";
+            $insertion2 = "INSERT INTO acteur VALUES('$acteur')";
+            $insertion3 = "INSERT INTO realisateur VALUES('$realisateur')";
+            $insertion4 = "INSERT INTO genre VALUES('$genre')";
             $execute = $bdd->query($insertion1);
             $execute2 = $bdd->query($insertion2);
             $execute3 = $bdd->query($insertion3);
@@ -72,12 +102,11 @@
               $msgSuccess = "Informations enregistrées avec succès";
             } else{
               $msgError = "L'enregistrement n'a pas pu être effectué";
-          //  }
-          }
+          //  } */
         }
       }
-
-/*$req = $bdd->prepare('INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer) VALUES(?, ?, ?, ?, ?, ?) ');
+      ?>
+<!--/*$req = $bdd->prepare('INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer) VALUES(?, ?, ?, ?, ?, ?) ');
 $act = $bdd->prepare('INSERT INTO acteur (nom_acteur) VALUES(?)');
 $genr = $bdd->prepare('INSERT INTO realisateur (nom_real) VALUES(?)');
 $reali = $bdd->prepare('INSERT INTO genre (type) VALUES(?)');
@@ -91,8 +120,8 @@ $req->execute(array($_POST['genre']));
 $req = $bdd->prepare('INSERT INTO acteur (acteur) VALUES(?)');
 $req->execute(array($_POST['nom_acteur']));
 $req = $bdd->prepare('INSERT INTO realisateur (realisateur) VALUES(?)');
-$req->execute(array($_POST['nom_real'])); */
-?>
+$req->execute(array($_POST['nom_real'])); */-->
+
         <div>
           <?php
           if(isset($msgError)){
