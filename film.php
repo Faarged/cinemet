@@ -35,7 +35,10 @@
             $reponse->execute();
             while ($donnees = $reponse->fetch())
             {
-              echo "<h1>$donnees[0]</h1>";
+              $pagetitle = $donnees[0];
+              echo "<h1>";
+              echo ucfirst($pagetitle);
+              echo "</h1>";
             }
           }else{
              echo "<h1>NOS FILMS</h1>";
