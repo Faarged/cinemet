@@ -33,12 +33,10 @@
           if(isset($_GET['id'])){
             $reponse = $bdd->prepare('SELECT type FROM genre WHERE genre.id_genre='.$_GET['id']);
             $reponse->execute();
-            //$result = $reponse->fetchAll();
             while ($donnees = $reponse->fetch())
             {
               echo "<h1>$donnees[0]</h1>";
             }
-            //echo "<h1>$result</h1>";
           }else{
              echo "<h1>NOS FILMS</h1>";
           }
@@ -80,7 +78,6 @@
                         <li><a href="#" class="collapsible">Films</a>
                             <ul>
                               <?php
-                                require_once 'php/comabdd.php';
                                 $reponse = $bdd->prepare('SELECT id_genre, type FROM genre' /*WHERE genre=' .$_GET['id']*/);
                                 $reponse->execute();
                                 while ($donnees = $reponse->fetch())
@@ -104,10 +101,6 @@
                     <div class="mesfilms">
                       <!-- je connecte ma base de données -->
                       <?php
-                      require_once 'php/comabdd.php';
-                      // On récupère tout le contenu de la table film
-                    //$reponse = $bdd->prepare('SELECT affiche, titre, id_film FROM film'/*possede genre WHERE film.id_film= possede.id_film AND possede.id_genre= genre.id_genre AND id_genre=' .$_GET['id']*/);
-
                       if(isset($_GET['id'])){
                         $reponse = $bdd->prepare('SELECT affiche, titre, film.id_film FROM film, possede, genre WHERE film.id_film= possede.id_film AND possede.id_genre= genre.id_genre AND genre.id_genre=' .$_GET['id']);
                       }else{
