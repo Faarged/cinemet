@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Admin</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="style/animate.css">
         <link rel="stylesheet" href="style/header.css">
         <link rel="stylesheet" href="style/footer.css">
@@ -64,7 +66,7 @@
               $realisateur->closeCursor();
               ?>
               </select><br />
-              <input type="text" class="form-control" name="realisateur" id="realisateur" placeholder="Nouveau realisateur">
+              <input type="text" class="form-control" name="realisateur2" id="realisateur2" placeholder="Nouveau realisateur">
             </div><br />
             <div class="form-group">
               <label for="acteur">Acteur</label>
@@ -96,15 +98,23 @@
                 ?>
             </div><br />
             <!--bouton pour valider l'ajout du film -->
-            <button type="submit" class="btn btn-primary">Valider</button>
+            <button type="submit" name="submit" class="btn btn-primary">Valider</button>
         </form>
 
-        <?php include 'footer.html'; ?>
+
       <?php
       //connexion à ma bdd en utilisant la page comabdd
       require 'php/comabdd.php';
 
       // Insertion du message à l'aide d'une requête préparée
+      if(isset($_POST['submit'])){
+        //echo "<h1>ok</h1><br />";
+        if(!empty($_POST['titre']) AND !empty($_POST['duree']) AND !empty($_POST['affiche']) AND !empty($_POST['date_sortie']) AND !empty($_POST['resume']) AND !empty($_POST['trailer']) AND !empty($_POST['realisateur']) AND !empty($_POST['acteur']) AND !empty($_POST['genre'])){
+          echo "<h1>Entrées validées</h1><br />";
+        }else{
+          echo "<h1>champs non remplis</h1><br />";
+        }
+      }
       if(isset($_POST['submit'])){ //si je clique sur envoyer
         if(isset($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer'], $_POST['realisateur'], $_POST['acteur'], $_POST['genre'])){
 
@@ -181,13 +191,19 @@ $req->execute(array($_POST['nom_acteur']));
 $req = $bdd->prepare('INSERT INTO realisateur (realisateur) VALUES(?)');
 $req->execute(array($_POST['nom_real'])); */-->
 
-        
 
+        <?php include 'footer.html'; ?>
 
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
     </body>
 </html>
