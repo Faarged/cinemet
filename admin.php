@@ -82,9 +82,18 @@
               </select><br />
               <input type="text" class="form-control" name="acteur" id="acteur" placeholder="Nouvel acteur">
             </div><br />
-            <div class="form-group">
-              <label for="genre">Genre</label>
-              <input type="text" class="form-control" name="genre" id="genre" placeholder="Genre">
+            <div class="form-check form-check-inline">
+              <label>Genre: </label>
+                <?php
+                include 'php/admingenre.php';
+                while ($donnees = $genre->fetch())
+                {
+                ?>
+              <input class="form-check-input" type="checkbox" name="genre" id="genre">
+              <label class="form-check-label" for="genre"><?php echo $donnees['type']; ?></label>
+                <?php }
+                $genre->closeCursor();
+                ?>
             </div><br />
             <!--bouton pour valider l'ajout du film -->
             <button type="submit" class="btn btn-primary">Valider</button>
