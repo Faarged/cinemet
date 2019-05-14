@@ -156,40 +156,10 @@
           $req4 ->execute(array(
             'type' => $genre
           ));
-
-
-            /*$insertion1 = "INSERT INTO film  VALUES('$titre', '$duree', '$affiche', '$date', '$resume', '$trailer')";
-            $insertion2 = "INSERT INTO acteur VALUES('$acteur')";
-            $insertion3 = "INSERT INTO realisateur VALUES('$realisateur')";
-            $insertion4 = "INSERT INTO genre VALUES('$genre')";
-            $execute = $bdd->query($insertion1);
-            $execute2 = $bdd->query($insertion2);
-            $execute3 = $bdd->query($insertion3);
-            $execute4 = $bdd->query($insertion4);
-
-            if($execute == true && $execute2 == true && $execute3 == true && $execute4 == true){
-              $msgSuccess = "Informations enregistrées avec succès";
-            } else{
-              $msgError = "L'enregistrement n'a pas pu être effectué";
-          //  } */
         }
       }
       ?>
-<!--/*$req = $bdd->prepare('INSERT INTO film (titre, duree, affiche, date_sortie, resume, trailer) VALUES(?, ?, ?, ?, ?, ?) ');
-$act = $bdd->prepare('INSERT INTO acteur (nom_acteur) VALUES(?)');
-$genr = $bdd->prepare('INSERT INTO realisateur (nom_real) VALUES(?)');
-$reali = $bdd->prepare('INSERT INTO genre (type) VALUES(?)');
 
-$req->execute(array($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer']));
-$act->execute(array($_POST['acteur']));
-$genr->execute(array($_POST['genre']));
-$reali->execute(array($_POST['realisateur']));*/
-/*$req = $bdd->prepare('INSERT INTO genre (type) VALUES(?)');
-$req->execute(array($_POST['genre']));
-$req = $bdd->prepare('INSERT INTO acteur (acteur) VALUES(?)');
-$req->execute(array($_POST['nom_acteur']));
-$req = $bdd->prepare('INSERT INTO realisateur (realisateur) VALUES(?)');
-$req->execute(array($_POST['nom_real'])); */-->
 
 
         <?php include 'footer.html'; ?>
