@@ -179,6 +179,9 @@
           $req4 ->execute(array(
             'type' => $genre
           ));
+          /* fonctionne pour Axel et Momo, moins de ligne même si il faut taper 4requetes
+          $req = $bdd->prepare('INSERT INTO FILM (TITRE, DUREE, DATE_SORTIE, AFFICHE, RESUME, VIDEO, REALISATEUR, ACTEUR) VALUES(?, ?, ?, ?,?, ?, ?, ?)');
+$req->execute(array($_POST['TITRE'], $_POST['DUREE'], $_POST['DATE_SORTIE'], $_POST['AFFICHE'], $_POST['RESUME'], $_POST['VIDEO'], $_POST['REALISATEUR'], $_POST['ACTEUR'])); */
         }else{ die();}
       }
       ?>
@@ -226,15 +229,24 @@
             <label for="titre">Film à effacer (entrez l'id correspondant au film voulu)</label>
             <input type="text" class="form-control" name="titrefilm" placeholder="ID du film à effacer">
           </div><br />
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Liste films
+            </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
           <?php
           include 'php/adminfilm.php';
           while ($donnees = $film->fetch())
           {
           ?>
-          <input class="form-control" type="text" placeholder="Pour supprimer '<?php echo $donnees['titre']; ?>' entrer <?php echo $donnees['id_film']; ?>" readonly><br />
+          <input class="form-control" type="text" placeholder="<?php echo $donnees['titre']; ?> id: <?php echo $donnees['id_film']; ?>" readonly>
         <?php }
         $film->closeCursor();
          ?>
+            </div>
+          </div>
+         </div>
          <button type="submit" name="erase" class="btn btn-primary">Valider</button>
     </div>
     <?php
