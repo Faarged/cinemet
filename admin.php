@@ -163,11 +163,75 @@
           $req4 ->execute(array(
             'type' => $genre
           ));
-        }
+        }else{ die();}
       }
       ?>
+    </div>
+    <!--************ liaisons entre tables**************** -->
+    <div id="liaison">
+      <p>Ajout de lien entre les tables</p>
+      <form>
+        <div class="form-check form-check-inline">
+          <label>Liaison film-genre: </label>
+            <?php
+            include 'php/admingenre.php';
+            while ($donnees = $genre->fetch())
+            {
+            ?>
+          <input class="form-check-input" type="checkbox" name="genre" id="genre">
+          <label class="form-check-label" for="genre"><?php echo $donnees['type']; ?></label>
+            <?php }
+            $genre->closeCursor();
+            ?>
+        </div><br />
+        <button type="submit" name="link" class="btn btn-primary">Valider</button>
+      </form>
+      <?php
+      if(isset($_POST['link'])){
+        $idfilm=  $_POST['film'];
+        $idgenre=  $_POST['idgenre'];
 
+        $lien = $bdd->prepare('INSERT INTO possede(id_genre, id_film)
+        VALUES(:idfilm, :idgenre)');
+        $lien->execute(array(
+          'idfilm' => $idfilm,
+          'idgenre' => $idgenre
+        ));
+      }
+      ?>
+    </div>
 
+    <!--***************************** effacement**************************** -->
+    <div id="suppression">
+      <p>Suppression de film</p>
+      <form action="admin.php" method="post">
+
+          <div class="form-group">
+            <label for="titre">Titre (copiez-collez le titre à supprimer depuis la liste ci-dessous)</label>
+            <input type="text" class="form-control" name="titrefilm" placeholder="Titre">
+          </div><br />
+          <?php
+          include 'php/adminfilm.php';
+          while ($donnees = $film->fetch())
+          {
+          ?>
+          <input class="form-control" type="text" placeholder="<?php echo $donnees['titre']; ?>" readonly><br />
+        <?php }
+        $film->closeCursor();
+         ?>
+         <button type="submit" name="erase" class="btn btn-primary">Valider</button>
+    </div>
+    <?php
+      /*if(isset($_POST['erase'])){
+        if(isset($_POST['titrefilm'])){
+          $efface = $_POST['titrefilm'];
+          $erase = $bdd->prepare('DELETE FROM film WHERE film.titre='$efface);
+          $erase->execute();
+        }else{
+          echo "Aucune donnée à effacer";
+        }
+      }*/
+    ?>
 
         <?php include 'footer.html'; ?>
 
