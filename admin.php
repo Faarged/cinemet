@@ -181,18 +181,7 @@ $req->execute(array($_POST['nom_acteur']));
 $req = $bdd->prepare('INSERT INTO realisateur (realisateur) VALUES(?)');
 $req->execute(array($_POST['nom_real'])); */-->
 
-        <div>
-          <p>
-          <?php
-          if(isset($msgError)){
-            echo $msgError;
-          }elseif(isset($msgSuccess)){
-            echo $msgSuccess;
-          }
-          ?>
-          </p>
-        </div>
-      </div>
+        
 
 
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
