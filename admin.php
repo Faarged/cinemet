@@ -25,19 +25,44 @@
 
         <!--création du formulaire-->
         <form action="admin.php" method="post" id="formulaire">
-          <p>
-            <label for="titre">TITRE</label> : <input type="text" name="titre" id="titre"  /><br />
-            <label for="duree">DUREE</label> :  <input type="time" name="duree" id="duree" /><br />
-            <label for="affiche">AFFICHE</label> :  <input type="text" name="affiche" id="affiche" /><br />
-            <label for="date_sortie">DATE_SORTIE</label> : <input type="date" name="date_sortie" id="date_sortie"  /><br />
-            <label for="resume">RESUME</label> : <input type="text" name="resume" id="resume"  /><br />
-            <label for="trailer">TRAILER</label> :  <input type="text" name="trailer" id="trailer" /><br />
-            <label for="realisateur">REALISATEUR</label> : <input type="text" name="realisateur" id="realisateur"  /><br />
-            <label for="acteur">ACTEUR</label> :  <input type="text" name="acteur" id="acteur" /><br />
-            <label for="genre">GENRE</label> :  <input type="text" name="genre" id="genre" /><br />
+
+            <div class="form-group">
+              <label for="titre">Titre</label>
+              <input type="text" class="form-control" name="titre" id="titre" placeholder="Titre">
+            </div><br />
+            <div class="form-group">
+              <label for="duree">Durée</label>
+              <input type="time" class="form-control" name="duree" id="duree">
+            </div><br />
+            <div class="form-group">
+              <label for="affiche">Affiche</label>
+              <input type="text" class="form-control" name="affiche" id="affiche" placeholder="Lien de l'affiche">
+            </div><br />
+            <div class="form-group">
+              <label for="date_sortie">Date de sortie</label>
+              <input type="date" class="form-control" name="date_sortie" id="date_sortie">
+            </div><br />
+            <div class="form-group"><label for="resume">Synopsis</label>
+              <textarea class="form-control" id="resume" name="resume" rows="4"></textarea>
+            </div><br />
+            <div class="form-group">
+              <label for="trailer">Trailer</label>
+              <input type="text" class="form-control" name="trailer" id="trailer" placeholder="Lien du trailer">
+            </div><br />
+            <div class="form-group">
+              <label for="realisateur">Realisateur</label>
+              <input type="text" class="form-control" name="realisateur" id="realisateur" placeholder="Realisateur">
+            </div><br />
+            <div class="form-group">
+              <label for="acteur">Acteur</label>
+              <input type="text" class="form-control" name="acteur" id="acteur" placeholder="Acteur">
+            </div><br />
+            <div class="form-group">
+              <label for="genre">Genre</label>
+              <input type="text" class="form-control" name="genre" id="genre" placeholder="Genre">
+            </div><br />
             <!--bouton pour valider l'ajout du film -->
-            <input type="submit" value="Envoyer" />
-          </p>
+            <button type="submit" class="btn btn-primary">Valider</button>
         </form>
 
         <?php include 'footer.html'; ?>
