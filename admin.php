@@ -82,7 +82,7 @@
                 $acteur->closeCursor();
                 ?>
               </select><br />
-              <input type="text" class="form-control" name="acteur" id="acteur" placeholder="Nouvel acteur">
+              <input type="text" class="form-control" name="acteur2" id="acteur" placeholder="Nouvel acteur">
             </div><br />
             <div class="form-check form-check-inline">
               <label>Genre: </label>
@@ -117,15 +117,22 @@
       }
       if(isset($_POST['submit'])){ //si je clique sur envoyer
         if(isset($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer'], $_POST['realisateur'], $_POST['acteur'], $_POST['genre'])){
-
+          if(isset($_POST['realisateur2'])){
+            $realisateur= $_POST['realisateur2'];
+          }else{
+            $realisateur=  $_POST['realisateur'];
+          }
+          if(isset($_POST['acteur2'])){
+            $acteur= $_POST['acteur2'];
+          }else{
+            $acteur=  $_POST['acteur'];
+          }
           $titre=  $_POST['titre'];
           $duree=  $_POST['duree'];
           $affiche=  $_POST['affiche'];
           $date=  $_POST['date_sortie'];
           $resume=  $_POST['resume'];
           $trailer=  $_POST['trailer'];
-          $realisateur=  $_POST['realisateur'];
-          $acteur=  $_POST['acteur'];
           $genre=  $_POST['genre'];
 
           $req = $bdd->prepare('INSERT INTO film(titre, duree, affiche, date_sortie, resume, trailer)
