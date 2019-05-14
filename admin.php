@@ -17,24 +17,27 @@
 
     <body>
       <?php include 'header.html';?>
+      <main>
+
         <div class="container1">
 
 
-          <h1>ADMIN</h1>
-          <?php
-          if(!isset($_POST['mot_de_passe']) OR $_POST['mot_de_passe'] != "jesuisunmauvaismotdepasse"){
-          ?>
-          <p>Veuillez entrer le mot de passe pour débloquer l'accès :</p>
-          <form action="admin.php" method="post">
-            <p>
-            <input type="password" name="mot_de_passe" />
-            <input type="submit" value="Valider" />
-            </p>
-          </form>
-        <p>Cette page est réservée au personnel administrateur du site cinemet</p>
+      <h1>ADMIN</h1>
+      <?php
+      if(!isset($_POST['mot_de_passe']) OR $_POST['mot_de_passe'] != "jesuisunmauvaismotdepasse"){
+      ?>
+      <p>Veuillez entrer le mot de passe pour débloquer l'accès :</p>
+      <form action="admin.php" method="post">
+        <p>
+        <input type="password" name="mot_de_passe" />
+        <input type="submit" value="Valider" />
+        </p>
+      </form>
+      <p>Cette page est réservée au personnel administrateur du site cinemet</p>
 
-      <?php }else{
-            ?>
+      <?php }
+      else{
+      ?>
 
         <p class="description">Ajout d'un film à la base de données</p>
 
@@ -220,15 +223,15 @@
       <form action="admin.php" method="post">
 
           <div class="form-group">
-            <label for="titre">Titre (copiez-collez le titre à supprimer depuis la liste ci-dessous)</label>
-            <input type="text" class="form-control" name="titrefilm" placeholder="Titre">
+            <label for="titre">Film à effacer (entrez l'id correspondant au film voulu)</label>
+            <input type="text" class="form-control" name="titrefilm" placeholder="ID du film à effacer">
           </div><br />
           <?php
           include 'php/adminfilm.php';
           while ($donnees = $film->fetch())
           {
           ?>
-          <input class="form-control" type="text" placeholder="<?php echo $donnees['titre']; ?>" readonly><br />
+          <input class="form-control" type="text" placeholder="Pour supprimer '<?php echo $donnees['titre']; ?>' entrer <?php echo $donnees['id_film']; ?>" readonly><br />
         <?php }
         $film->closeCursor();
          ?>
@@ -238,15 +241,18 @@
       /*if(isset($_POST['erase'])){
         if(isset($_POST['titrefilm'])){
           $efface = $_POST['titrefilm'];
-          $erase = $bdd->prepare('DELETE FROM film WHERE film.titre='$efface);
+          $erase = $bdd->prepare('DELETE FROM film WHERE film.id_film='$efface);
           $erase->execute();
+          echo "Le film sélectionné a été effacé";
         }else{
-          echo "Aucune donnée à effacer";
+          echo "<h1>Aucune donnée à effacer</h1>";
         }
-      }*/
+      } */
     ?>
+
     <?php }
     ?>
+      </main>
         <?php include 'footer.html'; ?>
 
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>

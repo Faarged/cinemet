@@ -5,3 +5,20 @@
 .form-check-inline{
   flex-wrap: wrap;
 }
+/*
+html, body{
+  height: 100%;
+}
+
+main{
+  min-height: 100%;
+  margin-bottom: -256px;
+}
+
+main:after{
+  display: block;
+  content: "";
+}
+#footer, main:after{
+  height: 256px;
+}*/
