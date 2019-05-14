@@ -14,7 +14,7 @@
     </head>
 
     <body>
-      <?php include 'header.html'; ?>
+      <?php include 'header.html';?>
         <div class="container1">
 
 
@@ -51,11 +51,36 @@
             </div><br />
             <div class="form-group">
               <label for="realisateur">Realisateur</label>
-              <input type="text" class="form-control" name="realisateur" id="realisateur" placeholder="Realisateur">
+              <label for="realisateur">déja indexé en bdd</label>
+              <select class="form-control" name="realisateur" id="realisateur">
+                <?php
+                require 'php/comabdd.php';
+                include 'php/adminreal.php';
+                while ($donnees = $realisateur->fetch())
+                {
+                ?>
+                <option><?php echo $donnees['nom_real'] ?></option>
+              <?php }
+              $realisateur->closeCursor();
+              ?>
+              </select><br />
+              <input type="text" class="form-control" name="realisateur" id="realisateur" placeholder="Nouveau realisateur">
             </div><br />
             <div class="form-group">
               <label for="acteur">Acteur</label>
-              <input type="text" class="form-control" name="acteur" id="acteur" placeholder="Acteur">
+              <label for="acteur">déja indexé en bdd</label>
+              <select class="form-control" name="acteur" id="acteur">
+                <?php
+                include 'php/adminacteur.php';
+                while ($donnees = $acteur->fetch())
+                {
+                ?>
+                <option><?php echo $donnees['nom_acteur'] ?></option>
+                <?php }
+                $acteur->closeCursor();
+                ?>
+              </select><br />
+              <input type="text" class="form-control" name="acteur" id="acteur" placeholder="Nouvel acteur">
             </div><br />
             <div class="form-group">
               <label for="genre">Genre</label>
@@ -68,7 +93,7 @@
         <?php include 'footer.html'; ?>
       <?php
       //connexion à ma bdd en utilisant la page comabdd
-      require_once 'comabdd.php';
+      require 'php/comabdd.php';
 
       // Insertion du message à l'aide d'une requête préparée
       if(isset($_POST['submit'])){ //si je clique sur envoyer
