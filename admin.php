@@ -20,8 +20,21 @@
         <div class="container1">
 
 
-            <h1>ADMIN</h1>
+          <h1>ADMIN</h1>
+          <?php
+          if(!isset($_POST['mot_de_passe']) OR $_POST['mot_de_passe'] != "jesuisunmauvaismotdepasse"){
+          ?>
+          <p>Veuillez entrer le mot de passe pour débloquer l'accès :</p>
+          <form action="admin.php" method="post">
+            <p>
+            <input type="password" name="mot_de_passe" />
+            <input type="submit" value="Valider" />
+            </p>
+          </form>
+        <p>Cette page est réservée au personnel administrateur du site cinemet</p>
 
+      <?php }else{
+            ?>
 
         <p class="description">Ajout d'un film à la base de données</p>
 
@@ -232,7 +245,8 @@
         }
       }*/
     ?>
-
+    <?php }
+    ?>
         <?php include 'footer.html'; ?>
 
       <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
