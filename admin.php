@@ -233,14 +233,14 @@ $req->execute(array($_POST['TITRE'], $_POST['DUREE'], $_POST['DATE_SORTIE'], $_P
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Liste films
             </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-menu dropdown-menu-lg-right"  aria-labelledby="dropdownMenuButton">
 
           <?php
           include 'php/adminfilm.php';
           while ($donnees = $film->fetch())
           {
           ?>
-          <input class="form-control" type="text" placeholder="<?php echo $donnees['titre']; ?> id: <?php echo $donnees['id_film']; ?>" readonly>
+          <input class="form-control dropdown-item" type="text" placeholder="<?php echo $donnees['titre']; ?> id: <?php echo $donnees['id_film']; ?>" readonly>
         <?php }
         $film->closeCursor();
          ?>
