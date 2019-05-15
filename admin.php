@@ -123,7 +123,7 @@
     <!--************ liaisons entre tables**************** -->
     <div id="liaison">
       <p>Ajout de lien entre les tables</p>
-      <form>
+      <form method="POST" action="">
         <div class="form-check form-check-inline">
           <label>Liaison film-genre: </label>
             <?php
@@ -183,7 +183,7 @@
          </div>
          <button type="submit" name="erase" class="btn btn-primary">Valider</button>
     </div>
-    
+
 
     <?php }
     ?>
