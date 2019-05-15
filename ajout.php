@@ -79,6 +79,15 @@ if(isset($_POST['submit'])){ //si je clique sur envoyer
     $req4 ->execute(array(
       'type' => $genre
     ));
+
+    /*  $liefait = $bdd->prepare('INSERT INTO fait(id_film, id_real)
+    VALUES(:idfilm, :idreal)');
+        $liefait ->execute(array(
+        'idfilm' =>
+        'idreal' =>
+      ));
+    */
+
     /* fonctionne pour Axel et Momo, moins de ligne même si il faut taper 4requetes
     $req = $bdd->prepare('INSERT INTO FILM (TITRE, DUREE, DATE_SORTIE, AFFICHE, RESUME, VIDEO, REALISATEUR, ACTEUR) VALUES(?, ?, ?, ?,?, ?, ?, ?)');
 $req->execute(array($_POST['TITRE'], $_POST['DUREE'], $_POST['DATE_SORTIE'], $_POST['AFFICHE'], $_POST['RESUME'], $_POST['VIDEO'], $_POST['REALISATEUR'], $_POST['ACTEUR'])); */
