@@ -42,7 +42,7 @@
         <p class="description">Ajout d'un film à la base de données</p>
 
         <!--création du formulaire-->
-        <form action="admin.php" method="post" id="formulaire">
+        <form action="" method="post" id="formulaire">
 
             <div class="form-group">
               <label for="titre">Titre</label>
@@ -223,7 +223,7 @@ $req->execute(array($_POST['TITRE'], $_POST['DUREE'], $_POST['DATE_SORTIE'], $_P
     <!--***************************** effacement**************************** -->
     <div id="suppression">
       <p>Suppression de film</p>
-      <form action="admin.php" method="post">
+      <form action="supprime.php" method="POST">
 
           <div class="form-group">
             <label for="titre">Film à effacer (entrez l'id correspondant au film voulu)</label>
@@ -250,16 +250,22 @@ $req->execute(array($_POST['TITRE'], $_POST['DUREE'], $_POST['DATE_SORTIE'], $_P
          <button type="submit" name="erase" class="btn btn-primary">Valider</button>
     </div>
     <?php
-      /*if(isset($_POST['erase'])){
+      if(isset($_POST['erase'])){
         if(isset($_POST['titrefilm'])){
           $efface = $_POST['titrefilm'];
-          $erase = $bdd->prepare('DELETE FROM film WHERE film.id_film='$efface);
+          $byefait = $bdd->prepare('DELETE FROM fait WHERE fait.id_film='.$efface);
+          $byefait->execute();
+          $byejoue = $bdd->prepare('DELETE FROM joue WHERE joue.id_film='.$efface);
+          $byejoue->execute();
+          $byepossede = $bdd->prepare('DELETE FROM possede WHERE possede.id_film='.$efface);
+          $byepossede->execute();
+          $erase = $bdd->prepare('DELETE FROM film WHERE film.id_film='.$efface);
           $erase->execute();
           echo "Le film sélectionné a été effacé";
         }else{
           echo "<h1>Aucune donnée à effacer</h1>";
         }
-      } */
+      }
     ?>
 
     <?php }
