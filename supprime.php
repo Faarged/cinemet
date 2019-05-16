@@ -39,7 +39,7 @@
       ?>
       <a class="retouradmin" href="admin.php">Retour page administrateur</a>
       </main>
-      <?php include 'footer.html'; ?>
+      <?php include 'footer.php'; ?>
 
     <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

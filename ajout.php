@@ -23,15 +23,14 @@
 require 'php/comabdd.php';
 
 // Insertion du message à l'aide d'une requête préparée
-if(isset($_POST['submit'])){
-  //echo "<h1>ok</h1><br />";
+
   if(!empty($_POST['titre']) AND !empty($_POST['duree']) AND !empty($_POST['affiche']) AND !empty($_POST['date_sortie']) AND !empty($_POST['resume']) AND !empty($_POST['trailer']) AND !empty($_POST['realisateur']) AND !empty($_POST['acteur']) AND !empty($_POST['genre'])){
     echo "<h1>Entrées validées</h1><br />";
   }else{
     echo "<h1>Champs non remplis</h1><br />";
   }
-}
-if(isset($_POST['submit'])){ //si je clique sur envoyer
+
+
   if(isset($_POST['titre'], $_POST['duree'], $_POST['affiche'], $_POST['date_sortie'], $_POST['resume'], $_POST['trailer'], $_POST['realisateur'], $_POST['acteur'], $_POST['genre'])){
     if(isset($_POST['realisateur2'])){
       $realisateur= $_POST['realisateur2'];
@@ -74,6 +73,7 @@ if(isset($_POST['submit'])){ //si je clique sur envoyer
       'nom_acteur' => $acteur
     ));
 
+    /*
     $req4 = $bdd->prepare('SELECT id_film FROM film WHERE titre='.$titre);
     $req4 ->execute();
     while ($donnees = $req4->fetch())
@@ -89,17 +89,17 @@ if(isset($_POST['submit'])){ //si je clique sur envoyer
     $req6 ->execute(array(
       'type' => $idgenre,
       'film' => $idfilm
-    ));
+    ));  */
 
   /* fonctionne pour Axel et Momo, moins de ligne même si il faut taper 4requetes
     $req = $bdd->prepare('INSERT INTO FILM (TITRE, DUREE, DATE_SORTIE, AFFICHE, RESUME, VIDEO, REALISATEUR, ACTEUR) VALUES(?, ?, ?, ?,?, ?, ?, ?)');
 $req->execute(array($_POST['TITRE'], $_POST['DUREE'], $_POST['DATE_SORTIE'], $_POST['AFFICHE'], $_POST['RESUME'], $_POST['VIDEO'], $_POST['REALISATEUR'], $_POST['ACTEUR'])); */
   }else{ die();}
-}
+
 ?>
         <a class="retouradmin" href="admin.php">Retour page administrateur</a>
       </main>
-    <?php include 'footer.html'; ?>
+    <?php include 'footer.php'; ?>
 
     <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
