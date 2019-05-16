@@ -23,8 +23,8 @@
 require 'php/comabdd.php';
 
 // Insertion du message à l'aide d'une requête préparée
-
-  if(!empty($_POST['titre']) AND !empty($_POST['duree']) AND !empty($_POST['affiche']) AND !empty($_POST['date_sortie']) AND !empty($_POST['resume']) AND !empty($_POST['trailer']) AND !empty($_POST['realisateur']) AND !empty($_POST['acteur']) AND !empty($_POST['genre'])){
+try {
+  if(!empty($_POST['titre']) AND !empty($_POST['duree']) AND !empty($_POST['affiche']) AND !empty($_POST['date_sortie']) AND !empty($_POST['resume']) AND !empty($_POST['trailer']) AND !empty($_POST['realisateur']) AND !empty($_POST['acteur'])){
     echo "<h1>Entrées validées</h1><br />";
   }else{
     echo "<h1>Champs non remplis</h1><br />";
@@ -95,7 +95,9 @@ require 'php/comabdd.php';
     $req = $bdd->prepare('INSERT INTO FILM (TITRE, DUREE, DATE_SORTIE, AFFICHE, RESUME, VIDEO, REALISATEUR, ACTEUR) VALUES(?, ?, ?, ?,?, ?, ?, ?)');
 $req->execute(array($_POST['TITRE'], $_POST['DUREE'], $_POST['DATE_SORTIE'], $_POST['AFFICHE'], $_POST['RESUME'], $_POST['VIDEO'], $_POST['REALISATEUR'], $_POST['ACTEUR'])); */
   }else{ die();}
-
+} catch(Exception $e){
+  echo 'Une erreur est survenue'.$e->getMessage().'\n';
+}
 ?>
         <a class="retouradmin" href="admin.php">Retour page administrateur</a>
       </main>
