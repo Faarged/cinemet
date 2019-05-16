@@ -74,21 +74,24 @@ if(isset($_POST['submit'])){ //si je clique sur envoyer
       'nom_acteur' => $acteur
     ));
 
-    $req4 = $bdd->prepare('INSERT INTO genre(type)
-    VALUES(:type)');
-    $req4 ->execute(array(
-      'type' => $genre
+    $req4 = $bdd->prepare('SELECT id_film FROM film WHERE titre='.$titre);
+    $req4 ->execute();
+    while ($donnees = $req4->fetch())
+    { $idfilm = $donnees['id_film'];}
+
+    $req5 = $bdd->prepare('SELECT id_genre FROM genre WHERE type='.$genre);
+    $req5 ->execute();
+    while ($donnees = $req5->fetch())
+    { $idgenre = $donnees['id_genre'];}
+
+    $req6 = $bdd->prepare('INSERT INTO possede(id_film, id_genre)
+    VALUES(:film, :type)');
+    $req6 ->execute(array(
+      'type' => $idgenre,
+      'film' => $idfilm
     ));
 
-    /*  $liefait = $bdd->prepare('INSERT INTO fait(id_film, id_real)
-    VALUES(:idfilm, :idreal)');
-        $liefait ->execute(array(
-        'idfilm' =>
-        'idreal' =>
-      ));
-    */
-
-    /* fonctionne pour Axel et Momo, moins de ligne même si il faut taper 4requetes
+  /* fonctionne pour Axel et Momo, moins de ligne même si il faut taper 4requetes
     $req = $bdd->prepare('INSERT INTO FILM (TITRE, DUREE, DATE_SORTIE, AFFICHE, RESUME, VIDEO, REALISATEUR, ACTEUR) VALUES(?, ?, ?, ?,?, ?, ?, ?)');
 $req->execute(array($_POST['TITRE'], $_POST['DUREE'], $_POST['DATE_SORTIE'], $_POST['AFFICHE'], $_POST['RESUME'], $_POST['VIDEO'], $_POST['REALISATEUR'], $_POST['ACTEUR'])); */
   }else{ die();}
