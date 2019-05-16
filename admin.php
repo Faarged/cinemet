@@ -182,7 +182,7 @@
           </div>
          </div>
          <button type="submit" name="erase" class="btn btn-primary">Valider</button>
-    </div>
+  </form
 
 
     <?php }
