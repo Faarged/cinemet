@@ -34,14 +34,12 @@ require 'php/comabdd.php';
       'resume' => $resume,
       'trailer' => $trailer
     ));
-    $verif = $bdd->prepare('SELECT nom_real FROM realisateur');
+    /*$verif = $bdd->prepare('SELECT nom_real FROM realisateur');
     $verif->execute();
     while($real = $verif->fetch()){
       if($realisateur == $real['nom_real']){
-
-
       }
-    }
+    }*/
 
     $req2 = $bdd->prepare('INSERT INTO realisateur(nom_real)
     VALUES(:nom_real)');
