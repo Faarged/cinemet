@@ -117,44 +117,8 @@
             <button type="submit" name="submit" class="btn btn-primary">Valider</button>
         </form>
 
-
-
     </div>
-    <!--************ liaisons entre tables**************** -->
-    <div id="liaison">
-      <p>Ajout de lien entre les tables</p>
-      <form method="POST" action="">
-        <div class="form-check form-check-inline">
-          <label>Liaison film-genre: </label>
-            <?php
-            include 'php/admingenre.php';
-            while ($donnees = $genre->fetch())
-            {
-            ?>
-          <input class="form-check-input" type="checkbox" name="genre" id="genre">
-          <label class="form-check-label" for="genre"><?php echo $donnees['type']; ?></label>
-            <?php }
-            $genre->closeCursor();
-            ?>
-        </div><br />
-        <button type="submit" name="link" class="btn btn-primary">Valider</button>
-      </form>
-      <?php
-      if(isset($_POST['link'])){
-        $idfilm=  $_POST['film'];
-        $idgenre=  $_POST['idgenre'];
-
-        $lien = $bdd->prepare('INSERT INTO possede(id_genre, id_film)
-        VALUES(:idfilm, :idgenre)');
-        $lien->execute(array(
-          'idfilm' => $idfilm,
-          'idgenre' => $idgenre
-        ));
-      }
-      ?>
-    </div>
-
-    <!--***************************** effacement**************************** -->
+      <!--***************************** effacement**************************** -->
     <div id="suppression">
       <p>Suppression de film</p>
       <form action="supprime.php" method="POST">
