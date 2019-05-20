@@ -58,6 +58,7 @@ try {
 
     /*  j'ai essayé d'ajouter l'id du film que je viens de créer après l'avoir sélectionné
     pour les tables de liaison, mais cela ne marche pas
+    
     $req4 = $bdd->prepare('SELECT id_film FROM film WHERE titre='.$titre);
     $req4 ->execute();
     while ($donnees = $req4->fetch())
